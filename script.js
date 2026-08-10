@@ -2,13 +2,30 @@ const search_content = document.getElementById("search_content");
 const home = document.getElementById("home");
 const big_content = document.getElementById("big_content");
 let historique = [];
+
+// Fonction pour gérer le basculement d'affichage sur mobile
+function AfficherVueMobile(vue) {
+    if (window.innerWidth <= 768) {
+        if (vue === 'home') {
+            search_content.style.display = 'none';
+            home.style.display = 'block';
+            home.style.width = '100%';
+            home.style.height = 'calc(100vh - 60px)';
+            home.style.overflow = 'auto';
+        } else if (vue === 'search') {
+            search_content.style.display = 'block';
+            home.style.display = 'none';
+        }
+    }
+}
+
 function BoutonContent(type){
 
 // Reglage de l'application
 
-if (type==="reglage"){
-       home.innerHTML = `<div class="option">Paramètre</div>`;
-       search_content.innerHTML = `<div class="js-search-content">
+    if (type==="reglage"){
+        home.innerHTML = `<div class="option">Paramètre</div>`;
+        search_content.innerHTML = `<div class="js-search-content">
 
                                       <div class="reglage-option">
                                          <button class="btn-option" onclick="OpenOption('general')">
@@ -35,9 +52,8 @@ if (type==="reglage"){
                                       </div>
                                       
                                    </div>`;
-
-
-   }
+        AfficherVueMobile('search');
+    }
 }
 
 // fonction pour ouvrir les options
@@ -46,22 +62,24 @@ function OpenOption(type){
     historique.push(search_content.innerHTML);
 
     if (type==="general"){
-        home.innerHTML = `<div class="option">Général</div>`
+        home.innerHTML = `<div class="option">Général</div>`;
         search_content.innerHTML = `
                                     <div class="js-search-content">
                                        <button onclick="Retour()" id="back">
                                          <img class="back-icon" src="images/fleche-gauche.png" alt="touche retour">
                                       </button><br>
                                     </div>
-                                   `
+                                   `;
+        AfficherVueMobile('home');
     }
 
     else if (type==="profil"){
-        home.innerHTML = `ceci est les reglage de profil`
+        home.innerHTML = `ceci est les reglage de profil`;
+        AfficherVueMobile('home');
     }
 
     else if (type==="perso"){
-        home.innerHTML = `<div class="option">Personnalisations</div>`
+        home.innerHTML = `<div class="option">Personnalisations</div>`;
         search_content.innerHTML = `
                                     <div class="js-search-content">
                                       <button onclick="Retour()" id="back">
@@ -85,15 +103,18 @@ function OpenOption(type){
                                         </button>
                                      </div>
                                     </div>
-                                   `
+                                   `;
+        AfficherVueMobile('home');
     }
 
     else if (type==="discussion"){
-            home.innerHTML = `ceci est les reglage de discussion`
+        home.innerHTML = `ceci est les reglage de discussion`;
+        AfficherVueMobile('home');
     }
 
     else if (type==="notification"){
-            home.innerHTML = `ceci est les reglage de notification`
+        home.innerHTML = `ceci est les reglage de notification`;
+        AfficherVueMobile('home');
     }
 }
 
@@ -121,7 +142,8 @@ function ThemeApp(theme){
                                               <p class="s-titre">Différents types d'icones</p>
                                            </button>
                                        </div>
-                                    </div>`
+                                    </div>`;
+        AfficherVueMobile('search');
     }
 
     else if (theme==="fond"){
@@ -181,24 +203,26 @@ function ThemeApp(theme){
                                   </div>
                                 </div>
                              </div>
-                          </div>`
+                          </div>`;
+        AfficherVueMobile('home');
 
-        const FondVert = document.getElementById("FondVert")
+        const FondVert = document.getElementById("FondVert");
         FondVert.addEventListener('change', () => {
 
             if (FondVert.checked) {
-                big_content.classList.add('Fond-ecran-vert')
+                big_content.classList.add('Fond-ecran-vert');
             }
 
             else{
-                big_content.classList.remove('Fond-ecran-vert')
+                big_content.classList.remove('Fond-ecran-vert');
             }
-        })
+        });
 
     }
 
     else if (theme==="ecriture"){
-        home.innerHTML = `ceci est les reglage de ecriture`
+        home.innerHTML = `ceci est les reglage de ecriture`;
+        AfficherVueMobile('home');
     }
 }
 
@@ -245,7 +269,9 @@ function OpenTheme(theme){
                               </label>
                             </div>
                           </div>
-                         `
+                         `;
+        AfficherVueMobile('home');
+
         const activation = document.getElementById("activation");
 
         activation.addEventListener("change", () => {
@@ -302,9 +328,10 @@ function OpenTheme(theme){
                                     </button>
                                </div>
                             </div>
-<!-- fonction pour couleur de fond bleue-->                     `
+<!-- fonction pour couleur de fond bleue-->                     `;
+        AfficherVueMobile('home');
 
-       const BleueColor = document.getElementById("BleueColor");
+        const BleueColor = document.getElementById("BleueColor");
         BleueColor.addEventListener("change", () => {
 
             if (BleueColor.checked) {
@@ -318,7 +345,7 @@ function OpenTheme(theme){
             else {
                 big_content.classList.remove("theme-bleue");
             }
-        })
+        });
 
         // fonction pour couleur de fond rose
 
@@ -335,7 +362,7 @@ function OpenTheme(theme){
             else {
                 big_content.classList.remove("theme-rose");
             }
-        })
+        });
 
         //fonction pour couleur de fond rouge
 
@@ -352,9 +379,9 @@ function OpenTheme(theme){
             else{
                 big_content.classList.remove("theme-rouge");
             }
-        })
+        });
 
-    // fonction pour couleur de fonds violet
+        // fonction pour couleur de fonds violet
         const VioletColor = document.getElementById("VioletColor");
         VioletColor.addEventListener("change", () => {
             if (VioletColor.checked) {
@@ -367,14 +394,15 @@ function OpenTheme(theme){
             else {
                 big_content.classList.remove("theme-violet");
             }
-        })
+        });
     }
 }
 
 function ButtonContent(type){
     if (type==="acceuil"){
-        search_content.innerHTML = `ceci est l'acceuil`
+        search_content.innerHTML = `ceci est l'acceuil`;
         home.innerHTML = `ceci est l'acceuil`;
+        AfficherVueMobile('search');
     }
 }
 
@@ -383,10 +411,8 @@ function Retour(){
     if(historique.length > 0){
 
         search_content.innerHTML = historique.pop();
+        AfficherVueMobile('search');
 
     }
 
 }
-
-
-

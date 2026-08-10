@@ -789,9 +789,13 @@ input:checked + .slider::before{
 
 /*debut responsive pour les telephones*/
 
+
+/* =======================================================
+   RESPONSIVE MOBILE NETTOYÉ (Avec marges & arrondis)
+   ======================================================= */
 @media screen and (max-width: 768px) {
 
-    /* 1. CORRECTION IOS SANS CUBER LES COULEURS */
+    /* 1. CORRECTION IOS SANS TALTÉRER LES COULEURS DU THÈME */
     button, input, select, textarea {
         -webkit-appearance: none !important;
         -moz-appearance: none !important;
@@ -799,12 +803,11 @@ input:checked + .slider::before{
         font-family: inherit;
     }
 
-    /* Permet aux boutons d'hériter de la couleur définie par le thème (clair ou sombre) */
     .btn-option, .btn-option * {
         -webkit-text-fill-color: initial !important;
     }
 
-    /* 2. STRUCTURE PRINCIPALE (SANS OVERFLOW) */
+    /* 2. STRUCTURE PRINCIPALE (AVEC MARGES DE CONTENU) */
     html, body {
         width: 100% !important;
         height: 100% !important;
@@ -823,7 +826,7 @@ input:checked + .slider::before{
         padding: 0 !important;
     }
 
-    /* Conteneur principal mobile ajusté à la hauteur de la barre du bas */
+    /* Conteneur principal avec marges internes (padding) */
     #search_content {
         width: 100% !important;
         height: calc(100vh - 60px) !important;
@@ -832,7 +835,7 @@ input:checked + .slider::before{
         overflow-x: hidden !important;
         border-right: none !important;
         box-sizing: border-box !important;
-        padding: 10px !important;
+        padding: 15px !important; /* Espacement intérieur du menu */
         margin: 0 !important;
     }
 
@@ -840,7 +843,7 @@ input:checked + .slider::before{
         display: none !important;
     }
 
-    /* 3. BARRE DU BAS DUPLIQUÉE À L'ORIGINAL */
+    /* 3. BARRE DU BAS FIXE */
     #side_container {
         position: fixed !important;
         top: auto !important;
@@ -873,7 +876,6 @@ input:checked + .slider::before{
         box-sizing: border-box !important;
     }
 
-    /* Désactive les déformations desktop sur mobile */
     #side_container:hover #side_barre,
     #side_barre:hover {
         height: 60px !important;
@@ -890,7 +892,7 @@ input:checked + .slider::before{
         margin: 0 !important;
     }
 
-    /* 4. DISPOSITION DES OPTIONS */
+    /* 4. RESTAURATION DES MARGES DES BOUTONS ET CARTES */
     .js-search-content {
         width: 100% !important;
         box-sizing: border-box !important;
@@ -900,16 +902,18 @@ input:checked + .slider::before{
         display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
-        gap: 12px !important;
+        gap: 15px !important; /* Espace entre chaque carte d'option */
         width: 100% !important;
         margin: 0 !important;
-        padding: 0 !important;
+        padding: 5px 0 !important;
         box-sizing: border-box !important;
     }
 
     .btn-option {
         width: 100% !important;
         max-width: 100% !important;
+        margin: 0 auto !important; /* Centre le bouton si besoin */
+        padding: 12px 15px !important; /* Padding interne de la carte */
         box-sizing: border-box !important;
         -webkit-tap-highlight-color: transparent !important;
     }

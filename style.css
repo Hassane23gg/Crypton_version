@@ -799,49 +799,50 @@ input:checked + .slider::before{
         overflow: hidden;
     }
 
+    /* Passer en colonne inversée pour mettre le premier élément HTML (#side_container) tout en bas */
     #big_content {
         display: flex !important;
-        flex-direction: column !important;
+        flex-direction: column-reverse !important;
         width: 100% !important;
         height: 100% !important;
-        position: relative !important;
+        height: 100svh !important;
     }
 
-    /* Le contenu prend tout l'écran avec une marge en bas pour ne pas cacher la barre */
-    #search_content {
-        width: 100% !important;
-        height: calc(100% - 60px - env(safe-area-inset-bottom, 0px)) !important;
-        border-right: none !important;
-        overflow-y: auto !important;
-    }
-
-    /* Ancrage fixe en bas pour la barre latérale */
+    /* La barre latérale passe en bas */
     #side_container {
-        position: fixed !important;
-        bottom: 0 !important;
-        left: 0 !important;
         width: 100% !important;
-        height: calc(60px + env(safe-area-inset-bottom, 0px)) !important;
-        padding-bottom: env(safe-area-inset-bottom, 0px) !important; /* Marge pour les gestes Android/iOS */
-        z-index: 9999 !important; /* Garantit que la barre reste au-dessus de tout */
+        height: 60px !important;
+        min-height: 60px !important;
+        padding: 0 !important;
+        padding-bottom: env(safe-area-inset-bottom, 0px) !important;
         background: #10121b !important;
+        transition: none !important;
     }
 
     /* Style de la barre de navigation */
     #side_barre {
         width: 100% !important;
-        height: 60px !important;
+        height: 100% !important;
         flex-direction: row !important;
         justify-content: space-around !important;
         align-items: center !important;
         border-radius: 0 !important;
         border-top: 1px solid #1e293b;
-        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5) !important;
+        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.4) !important;
     }
 
-    /* Annulation des effets hover desktop */
+    /* Le contenu prend tout l'espace disponible au-dessus de la barre */
+    #search_content {
+        flex: 1 !important;
+        width: 100% !important;
+        height: auto !important;
+        border-right: none !important;
+        overflow-y: auto !important;
+    }
+
+    /* Neutralisation des survols desktop */
     #side_container:hover #side_barre {
-        height: 60px !important;
+        height: 100% !important;
         border-radius: 0 !important;
         box-shadow: none !important;
     }
@@ -850,6 +851,7 @@ input:checked + .slider::before{
         padding: 0 !important;
     }
 
+    /* Alignement horizontal des icônes */
     .btn-top-down {
         display: flex !important;
         flex-direction: row !important;

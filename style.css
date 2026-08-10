@@ -796,58 +796,64 @@ input:checked + .slider::before{
         height: 100%;
         margin: 0;
         padding: 0;
-        /* Utilisation de svh (small viewport height) pour s'adapter parfaitement aux téléphones */
-        height: 100svh;
+        overflow: hidden;
     }
 
     #big_content {
         display: flex !important;
-        flex-direction: column !important; /* Le contenu en haut, la barre en bas */
-        width: 100% !important;
-        height: 100svh !important;
-    }
-
-    /* Le contenu prend tout l'espace disponible au-dessus */
-    #search_content {
-        flex: 1 !important;
-        width: 100% !important;
-        height: auto !important;
-        border-right: none !important;
-    }
-
-    /* Le conteneur de la barre latérale reste collé en bas */
-    #side_container {
-        width: 100% !important;
-        height: 60px !important;
-        min-height: 60px !important;
-        padding: 0 !important;
-        transition: none !important;
-    }
-
-    /* La barre de navigation horizontale */
-    #side_barre {
+        flex-direction: column !important;
         width: 100% !important;
         height: 100% !important;
+        position: relative !important;
+    }
+
+    /* Le contenu prend tout l'écran avec une marge en bas pour ne pas cacher la barre */
+    #search_content {
+        width: 100% !important;
+        height: calc(100% - 60px - env(safe-area-inset-bottom, 0px)) !important;
+        border-right: none !important;
+        overflow-y: auto !important;
+    }
+
+    /* Ancrage fixe en bas pour la barre latérale */
+    #side_container {
+        position: fixed !important;
+        bottom: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: calc(60px + env(safe-area-inset-bottom, 0px)) !important;
+        padding-bottom: env(safe-area-inset-bottom, 0px) !important; /* Marge pour les gestes Android/iOS */
+        z-index: 9999 !important; /* Garantit que la barre reste au-dessus de tout */
+        background: #10121b !important;
+    }
+
+    /* Style de la barre de navigation */
+    #side_barre {
+        width: 100% !important;
+        height: 60px !important;
         flex-direction: row !important;
         justify-content: space-around !important;
         align-items: center !important;
         border-radius: 0 !important;
         border-top: 1px solid #1e293b;
-        box-shadow: none !important;
+        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5) !important;
     }
 
-    /* Empêche les effets hover desktop */
+    /* Annulation des effets hover desktop */
     #side_container:hover #side_barre {
-        height: 100% !important;
+        height: 60px !important;
         border-radius: 0 !important;
         box-shadow: none !important;
     }
 
-    /* Alignement des icônes */
+    #side_container:hover {
+        padding: 0 !important;
+    }
+
     .btn-top-down {
         display: flex !important;
         flex-direction: row !important;
-        gap: 12px !important;
+        gap: 10px !important;
         margin: 0 !important;
     }
 

@@ -29,7 +29,7 @@ function BoutonContent(type){
 
                                       <div class="reglage-option">
                                          <button class="btn-option" onclick="OpenOption('general')">
-                                            <p  class="titre"><img class="logo-option-js" src="images/vue-frontale-ouverte-de-lordinateur-portable-avec-boutons-et-ecran-vide.png" alt="">Général</p>
+                                            <p class="titre"><img class="logo-option-js" src="images/vue-frontale-ouverte-de-lordinateur-portable-avec-boutons-et-ecran-vide.png" alt="">Général</p>
                                             <p class="s-titre">Langue, taille de police</p>
                                          </button>
                                          <button class="btn-option" onclick="OpenOption('profil')">
@@ -70,12 +70,19 @@ function OpenOption(type){
                                       </button><br>
                                     </div>
                                    `;
-        AfficherVueMobile('home');
+        AfficherVueMobile('search');
     }
 
     else if (type==="profil"){
         home.innerHTML = `ceci est les reglage de profil`;
-        AfficherVueMobile('home');
+        search_content.innerHTML = `
+                                    <div class="js-search-content">
+                                       <button onclick="Retour()" id="back">
+                                         <img class="back-icon" src="images/fleche-gauche.png" alt="touche retour">
+                                      </button><br>
+                                    </div>
+                                   `;
+        AfficherVueMobile('search');
     }
 
     else if (type==="perso"){
@@ -98,23 +105,34 @@ function OpenOption(type){
                                             <p class="titre"><img class="logo-option-js" src="images/police-de-caractere.png" alt="">Réglage des écritures</p>
                                             <p class="s-titre">Style, police et couleur des écriture</p>
                                         </button>
-                                        <button>
-                                        
-                                        </button>
                                      </div>
                                     </div>
                                    `;
-        AfficherVueMobile('home');
+        AfficherVueMobile('search');
     }
 
     else if (type==="discussion"){
         home.innerHTML = `ceci est les reglage de discussion`;
-        AfficherVueMobile('home');
+        search_content.innerHTML = `
+                                        <div class="js-search-content">
+                                           <button onclick="Retour()" id="back">
+                                             <img class="back-icon" src="images/fleche-gauche.png" alt="touche retour">
+                                          </button><br>
+                                        </div>
+                                       `;
+        AfficherVueMobile('search');
     }
 
     else if (type==="notification"){
         home.innerHTML = `ceci est les reglage de notification`;
-        AfficherVueMobile('home');
+        search_content.innerHTML = `
+                                        <div class="js-search-content">
+                                           <button onclick="Retour()" id="back">
+                                             <img class="back-icon" src="images/fleche-gauche.png" alt="touche retour">
+                                          </button><br>
+                                        </div>
+                                       `;
+        AfficherVueMobile('search');
     }
 }
 
@@ -147,82 +165,94 @@ function ThemeApp(theme){
     }
 
     else if (theme==="fond"){
-        home.innerHTML = `<div class="js-search-content">
-                             <div class="theme-apk">
-                             <h1>Les fonds d'écran de l'application</h1>
-                                <div class="reglage-option">
-                                  <div class="box-btn-fonds-ecran">
-                                     <button class="btn-fonds-ecran">
-                                        Fonds d'écran vert
-                                        <img id="vert-fond" class="btn-fonds" src="fonds/497175.png" alt="">
-                                     </button>
-                                     <label class="switch">
-                                          <input type="checkbox" id="FondVert">
-                                          <span class="slider"></span>
-                                      </label>
-                                  </div>
-                                  <div class="box-btn-fonds-ecran">
-                                     <button class="btn-fonds-ecran">
-                                         Fond d'écran bleue 
-                                         <img class="btn-fonds" src="fonds/354971.jpg" alt="">
-                                     </button>
-                                     <label class="switch">
-                                          <input type="checkbox" id="activation">
-                                          <span class="slider"></span>
-                                      </label>
-                                  </div>
-                                  <div class="box-btn-fonds-ecran">
-                                      <button class="btn-fonds-ecran">
-                                         Fond d'écran rose 
-                                         <img class="btn-fonds" src="fonds/669283.jpg" alt="">
-                                      </button>
-                                      <label class="switch">
-                                          <input type="checkbox" id="activation">
-                                          <span class="slider"></span>
-                                      </label>
-                                  </div>
-                                  <div class="box-btn-fonds-ecran">
-                                      <button class="btn-fonds-ecran">
-                                         Fond d'écran rouge
-                                         <img class="btn-fonds" src="fonds/118285.jpg" alt="">
-                                      </button>
-                                      <label class="switch">
-                                          <input type="checkbox" id="activation">
-                                          <span class="slider"></span>
-                                      </label>
-                                  </div>
-                                  <div class="box-btn-fonds-ecran">
-                                      <button class="btn-fonds-ecran">
-                                         Fond d'écran violet
-                                         <img class="btn-fonds" src="fonds/418894.jpg" alt="">
-                                      </button>
-                                      <label class="switch">
-                                          <input type="checkbox" id="activation">
-                                          <span class="slider"></span>
-                                      </label>
-                                  </div>
-                                </div>
-                             </div>
-                          </div>`;
-        AfficherVueMobile('home');
+        search_content.innerHTML = `<div class="js-search-content">
+                                     <button onclick="Retour()" id="back">
+                                         <img class="back-icon" src="images/fleche-gauche.png" alt="touche retour">
+                                     </button><br>
+                                     <div class="theme-apk">
+                                     <h1>Les fonds d'écran de l'application</h1>
+                                        <div class="reglage-option">
+                                          <div class="box-btn-fonds-ecran">
+                                             <button class="btn-fonds-ecran">
+                                                Fonds d'écran vert
+                                                <img id="vert-fond" class="btn-fonds" src="fonds/497175.png" alt="">
+                                             </button>
+                                             <label class="switch">
+                                                  <input type="checkbox" id="FondVert">
+                                                  <span class="slider"></span>
+                                              </label>
+                                          </div>
+                                          <div class="box-btn-fonds-ecran">
+                                             <button class="btn-fonds-ecran">
+                                                 Fond d'écran bleue 
+                                                 <img class="btn-fonds" src="fonds/354971.jpg" alt="">
+                                             </button>
+                                             <label class="switch">
+                                                  <input type="checkbox" id="activation">
+                                                  <span class="slider"></span>
+                                              </label>
+                                          </div>
+                                          <div class="box-btn-fonds-ecran">
+                                              <button class="btn-fonds-ecran">
+                                                 Fond d'écran rose 
+                                                 <img class="btn-fonds" src="fonds/669283.jpg" alt="">
+                                              </button>
+                                              <label class="switch">
+                                                  <input type="checkbox" id="activation">
+                                                  <span class="slider"></span>
+                                              </label>
+                                          </div>
+                                          <div class="box-btn-fonds-ecran">
+                                              <button class="btn-fonds-ecran">
+                                                 Fond d'écran rouge
+                                                 <img class="btn-fonds" src="fonds/118285.jpg" alt="">
+                                              </button>
+                                              <label class="switch">
+                                                  <input type="checkbox" id="activation">
+                                                  <span class="slider"></span>
+                                              </label>
+                                          </div>
+                                          <div class="box-btn-fonds-ecran">
+                                              <button class="btn-fonds-ecran">
+                                                 Fond d'écran violet
+                                                 <img class="btn-fonds" src="fonds/418894.jpg" alt="">
+                                              </button>
+                                              <label class="switch">
+                                                  <input type="checkbox" id="activation">
+                                                  <span class="slider"></span>
+                                              </label>
+                                          </div>
+                                        </div>
+                                     </div>
+                                  </div>`;
+        AfficherVueMobile('search');
 
         const FondVert = document.getElementById("FondVert");
-        FondVert.addEventListener('change', () => {
+        if(FondVert){
+            FondVert.addEventListener('change', () => {
 
-            if (FondVert.checked) {
-                big_content.classList.add('Fond-ecran-vert');
-            }
+                if (FondVert.checked) {
+                    big_content.classList.add('Fond-ecran-vert');
+                }
 
-            else{
-                big_content.classList.remove('Fond-ecran-vert');
-            }
-        });
+                else{
+                    big_content.classList.remove('Fond-ecran-vert');
+                }
+            });
+        }
 
     }
 
     else if (theme==="ecriture"){
         home.innerHTML = `ceci est les reglage de ecriture`;
-        AfficherVueMobile('home');
+        search_content.innerHTML = `
+                                    <div class="js-search-content">
+                                       <button onclick="Retour()" id="back">
+                                         <img class="back-icon" src="images/fleche-gauche.png" alt="touche retour">
+                                      </button><br>
+                                    </div>
+                                   `;
+        AfficherVueMobile('search');
     }
 }
 
@@ -257,9 +287,14 @@ function EnleverThemes(){
 }
 
 function OpenTheme(theme){
+    historique.push(search_content.innerHTML);
+
     if (theme==="themeapk"){
-        home.innerHTML = `
+        search_content.innerHTML = `
                           <div class="js-search-content">
+                            <button onclick="Retour()" id="back">
+                               <img class="back-icon" src="images/fleche-gauche.png" alt="touche retour">
+                            </button><br>
                             <div class="theme-apk">
                               <h1 class="titre-option">Thème de l'application</h1>
                               <h2 class="s-titre-option">Thème sombre et thème claire</h2>
@@ -270,32 +305,37 @@ function OpenTheme(theme){
                             </div>
                           </div>
                          `;
-        AfficherVueMobile('home');
+        AfficherVueMobile('search');
 
         const activation = document.getElementById("activation");
 
-        activation.addEventListener("change", () => {
+        if(activation){
+            activation.addEventListener("change", () => {
 
-            if (activation.checked) {
+                if (activation.checked) {
 
-                EnleverThemes();
-                big_content.classList.add("theme-light");
-                home.style.border = "none";
-                console.log("Thème clair activé");
+                    EnleverThemes();
+                    big_content.classList.add("theme-light");
+                    home.style.border = "none";
+                    console.log("Thème clair activé");
 
-            } else {
+                } else {
 
-                big_content.classList.remove("theme-light");
-                console.log("Thème sombre activé");
+                    big_content.classList.remove("theme-light");
+                    console.log("Thème sombre activé");
 
-            }
+                }
 
-        });
+            });
+        }
     }
 
     else if (theme==="fondapk"){
-        home.innerHTML = `
+        search_content.innerHTML = `
                             <div class="js-search-content">
+                               <button onclick="Retour()" id="back">
+                                  <img class="back-icon" src="images/fleche-gauche.png" alt="touche retour">
+                               </button><br>
                                <div class="theme-apk">
                                  <h1>Les couleurs de fonds</h1>
                                     <button class="bouton-color">
@@ -329,72 +369,80 @@ function OpenTheme(theme){
                                </div>
                             </div>
 <!-- fonction pour couleur de fond bleue-->                     `;
-        AfficherVueMobile('home');
+        AfficherVueMobile('search');
 
         const BleueColor = document.getElementById("BleueColor");
-        BleueColor.addEventListener("change", () => {
+        if(BleueColor){
+            BleueColor.addEventListener("change", () => {
 
-            if (BleueColor.checked) {
+                if (BleueColor.checked) {
 
-                DesactiverAutres(BleueColor);
-                EnleverThemes();
+                    DesactiverAutres(BleueColor);
+                    EnleverThemes();
 
-                big_content.classList.add("theme-bleue");
-            }
+                    big_content.classList.add("theme-bleue");
+                }
 
-            else {
-                big_content.classList.remove("theme-bleue");
-            }
-        });
+                else {
+                    big_content.classList.remove("theme-bleue");
+                }
+            });
+        }
 
         // fonction pour couleur de fond rose
 
         const RoseColor = document.getElementById("RoseColor");
-        RoseColor.addEventListener("change", () => {
-            if (RoseColor.checked) {
+        if(RoseColor){
+            RoseColor.addEventListener("change", () => {
+                if (RoseColor.checked) {
 
-                DesactiverAutres(RoseColor);
-                EnleverThemes();
+                    DesactiverAutres(RoseColor);
+                    EnleverThemes();
 
-                big_content.classList.add("theme-rose");
+                    big_content.classList.add("theme-rose");
 
-            }
-            else {
-                big_content.classList.remove("theme-rose");
-            }
-        });
+                }
+                else {
+                    big_content.classList.remove("theme-rose");
+                }
+            });
+        }
 
         //fonction pour couleur de fond rouge
 
         const RougeColor = document.getElementById("RougeColor");
-        RougeColor.addEventListener("change", () => {
+        if(RougeColor){
+            RougeColor.addEventListener("change", () => {
 
-            if (RougeColor.checked) {
+                if (RougeColor.checked) {
 
-                DesactiverAutres(RougeColor);
-                EnleverThemes();
-                big_content.classList.add("theme-rouge");
-            }
+                    DesactiverAutres(RougeColor);
+                    EnleverThemes();
+                    big_content.classList.add("theme-rouge");
+                }
 
-            else{
-                big_content.classList.remove("theme-rouge");
-            }
-        });
+                else{
+                    big_content.classList.remove("theme-rouge");
+                }
+            });
+        }
 
         // fonction pour couleur de fonds violet
         const VioletColor = document.getElementById("VioletColor");
-        VioletColor.addEventListener("change", () => {
-            if (VioletColor.checked) {
+        if(VioletColor){
+            VioletColor.addEventListener("change", () => {
+                if (VioletColor.checked) {
 
-                DesactiverAutres(VioletColor);
-                EnleverThemes();
-                big_content.classList.add("theme-violet");
-            }
+                    DesactiverAutres(VioletColor);
+                    EnleverThemes();
+                    big_content.classList.add("theme-violet");
+                }
 
-            else {
-                big_content.classList.remove("theme-violet");
-            }
-        });
+                else {
+                    big_content.classList.remove("theme-violet");
+                }
+            });
+        }
     }
 }
 

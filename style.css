@@ -7,42 +7,37 @@ body{
 
 body, html {
     overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    height: 100dvh; /* Adaptation dynamique Linux / Mobile */
 }
-
-body{
-    margin: 0;
-    padding: 0;
-}
-
-
 
 #big_content{
     display: flex;
     flex-direction: row;
     background: #0a0b10;
-    color:#e6edf3
+    color:#e6edf3;
+    width: 100%;
+    height: 100%; /* S'adapte à 100% de la fenêtre */
 }
-
-
 
 #side_container{
-    width: 3.5%;
-    height: 727px;
+    width: 60px;
+    height: 100%;
     display: flex;
     align-items: center;
+    transition: 0.4s ease;
 }
-
 
 /* Toutes les zones */
 .box{
     border: 1px solid black;
 }
 
-
 /* Sidebar */
 #side_barre{
     width: 100%;
-    height: 727px;
+    height: 100%;
     overflow: hidden;
     display: flex;
     border: 1px solid transparent;
@@ -50,16 +45,12 @@ body{
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    transition: height 0.4s ease;
+    transition: height 0.4s ease, border-radius 0.4s ease, padding 0.4s ease;
 }
 
 #side_barre:hover{
     padding-top: 5px;
     padding-bottom: 5px;
-}
-
-#side_container{
-    transition:  0.4s ease;
 }
 
 /* Réduction au survol */
@@ -75,26 +66,23 @@ body{
     padding: 10px;
 }
 
-
 /* Recherche */
 #search_content{
-    width: 26.5%;
-    height: 727px;
+    width: 300px;
+    height: 100%;
     border-right: none;
     background: #151824;
     transition: transform 0.4s ease, box-shadow 0.4s ease;
     animation: apparition 0.8s ease forwards;
-    overflow: auto;
+    overflow-y: auto;
 }
 
 @keyframes apparition {
-
 
     0% {
         opacity: 0;
         transform: scale(0.5) translateY(50px);
     }
-
 
     100% {
         opacity: 1;
@@ -103,17 +91,13 @@ body{
 
 }
 
-
 /* Menu principal */
 #home{
-    width: 70%;
-    height: 727px;
+    flex: 1;
+    height: 100%;
 }
 
-
-
 /* BOUTONS */
-
 
 .btn-top-down{
     display: flex;
@@ -121,12 +105,11 @@ body{
     gap: 10px;
     align-items: center;
     margin: 3px;
+    width: 100%;
 }
 
-
-
 .btn-ico{
-    width: 90%;
+    width: 40px;
     height: 40px;
     border: none;
     cursor: pointer;
@@ -135,12 +118,10 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 0;
 }
 
-
-
 .btn-ico:hover{
-
     transition: 0.5s;
     transform: scale(1.1);
     box-shadow: 0 0 15px rgba(16, 185, 129, 0.5),
@@ -148,10 +129,10 @@ body{
     background: white;
 }
 
-
-
 .icon{
-    width: 70%;
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
 }
 
 /*bouton dans le java script*/
@@ -202,7 +183,6 @@ body{
     border: none;
 }
 
-
 .theme-apk{
     color: #777777;
 }
@@ -226,7 +206,6 @@ body{
     border-color: #e2e8f0;
 }
 
-
 .theme-light #side_barre{
     background: #f1f5f9;
     border: 1px solid #e2e8f0;
@@ -247,8 +226,6 @@ body{
 }
 
 /* Boutons des options */
-
-
 
 .theme-light .btn-option:hover{
     background: linear-gradient(#00ff88,rgba(16, 185, 129, 0.5));
@@ -346,7 +323,7 @@ input:checked + .slider::before{
 }
 
 .btn-fonds-ecran{
-   display: flex;
+    display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
@@ -368,7 +345,6 @@ input:checked + .slider::before{
     box-shadow: 0 0 15px #00ff88,
     0 4px 6px -1px rgba(0, 0, 0, 0.3);
 }
-
 
 /*pour le theme claire*/
 
@@ -421,7 +397,7 @@ input:checked + .slider::before{
 }
 
 .s-titre{
-  margin-top: 0;
+    margin-top: 0;
 }
 
 .option{
@@ -448,13 +424,10 @@ input:checked + .slider::before{
     padding: 10px;
 }
 
-
-
 /*theme titre des option de js*/
 
 .titre-option{
     font-size: 2em;
-
 }
 
 .s-titre-option{
@@ -462,8 +435,9 @@ input:checked + .slider::before{
 }
 
 /*theme bleue dans le js*/
+
 #big_content.theme-bleue{
-   background: #0b132b;
+    background: #0b132b;
     color:#f8fafc;
 }
 
@@ -554,7 +528,6 @@ input:checked + .slider::before{
 
 /*theme rose dans le js*/
 
-
 .theme-rose .theme-apk{
     color: white;
 }
@@ -589,10 +562,10 @@ input:checked + .slider::before{
 }
 
 .theme-rose .btn-option:hover{
-        background: linear-gradient(135deg, #db2777, #8b5cf6);
-        box-shadow: 0 0 20px rgba(236, 72, 153, 0.6),
-        0 6px 10px -1px rgba(0, 0, 0, 0.4);;
-        color: #ffffff;
+    background: linear-gradient(135deg, #db2777, #8b5cf6);
+    box-shadow: 0 0 20px rgba(236, 72, 153, 0.6),
+    0 6px 10px -1px rgba(0, 0, 0, 0.4);;
+    color: #ffffff;
 }
 
 .theme-rose input:checked + .slider{
@@ -675,7 +648,7 @@ input:checked + .slider::before{
 }
 
 .theme-rouge .btn-option:hover{
-    background: linear-gradient(135deg, #dc2626, #ea580c); /* Dégradé rouge rubis/orange */
+    background: linear-gradient(135deg, #dc2626, #ea580c);
     box-shadow: 0 4px 15px rgba(220, 38, 38, 0.5),
     0 0 8px rgba(234, 88, 12, 0.3);
     color: #ffffff;
@@ -685,7 +658,6 @@ input:checked + .slider::before{
     background: #2d1215;
     border: 1px solid #3a171a ;
 }
-
 
 .theme-rouge input:checked + .slider{
     background: #ef4444;
@@ -703,7 +675,6 @@ input:checked + .slider::before{
     background: white;
     box-shadow: 0 4px 15px rgba(220, 38, 38, 0.5),
     0 0 8px rgba(234, 88, 12, 0.3);
-
 }
 
 .theme-rouge #back{
@@ -768,7 +739,7 @@ input:checked + .slider::before{
 }
 
 .theme-violet .btn-option:hover{
-    background: linear-gradient(135deg, #7c3aed, #6366f1); /* Dégradé violet/indigo */
+    background: linear-gradient(135deg, #7c3aed, #6366f1);
     box-shadow: 0 6px 20px rgba(124, 58, 237, 0.45),
     0 0 10px rgba(99, 102, 241, 0.3);
     color: #ffffff;
@@ -778,7 +749,6 @@ input:checked + .slider::before{
     background: #1e1837;
     border: 1px solid #2d2452 ;
 }
-
 
 .theme-violet input:checked + .slider{
     background: #8b5cf6;
@@ -796,7 +766,6 @@ input:checked + .slider::before{
     background: white;
     box-shadow: 0 4px 15px rgba(139, 92, 246, 0.5),
     0 0 8px rgba(99, 102, 241, 0.3);
-
 }
 
 .theme-violet #back{
@@ -850,100 +819,116 @@ input:checked + .slider::before{
 
 /*debut responsive pour les telephones*/
 
-/* Styles globaux applicables à tous les écrans et systèmes */
-html, body {
-    width: 100%;
-    height: 100vh;
-    height: 100dvh; /* S'adapte dynamiquement aux barres système et navigateurs */
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-}
+@media screen and (max-width: 768px) {
 
-#big_content {
-    display: flex !important;
-    flex-direction: column !important;
-    width: 100% !important;
-    height: 100% !important;
-    position: relative !important;
-}
+    html, body {
+        width: 100%;
+        height: 100vh;
+        height: 100dvh;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
 
-/* Le contenu occupe tout l'espace disponible au-dessus de la barre */
-#search_content {
-    width: 100% !important;
-    flex: 1 !important; /* Remplacement de height: calc() par un dimensionnement dynamique */
-    overflow-y: auto !important;
-    border-right: none !important;
-    box-sizing: border-box !important;
-}
+    #big_content {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        height: 100% !important;
+        position: relative !important;
+    }
 
-/* Barre d'accès ancrée tout en bas */
-#side_container {
-    position: fixed !important;
-    top: auto !important;
-    bottom: 0 !important;
-    left: 0 !important;
-    right: 0 !important;
-    width: 100% !important;
-    height: 60px !important;
-    z-index: 99999 !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    background: #10121b !important;
-}
+    /* Le contenu de recherche prend tout l'écran au-dessus de la barre */
+    #search_content {
+        width: 100% !important;
+        flex: 1 !important;
+        height: auto !important;
+        overflow-y: auto !important;
+        border-right: none !important;
+        box-sizing: border-box !important;
+    }
 
-/* Barre interne réinitialisée */
-#side_barre {
-    position: static !important;
-    display: flex !important;
-    width: 100% !important;
-    height: 60px !important;
-    min-height: 60px !important;
-    max-height: 60px !important;
-    flex-direction: row !important;
-    justify-content: space-around !important;
-    align-items: center !important;
-    border-radius: 0 !important;
-    border: none !important;
-    border-top: 1px solid #1e293b !important;
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5) !important;
-    padding: 0 !important;
-    margin: 0 !important;
-}
+    /* Le conteneur parent forcé tout en bas */
+    #side_container {
+        position: fixed !important;
+        top: auto !important;
+        bottom: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        width: 100% !important;
+        height: 60px !important;
+        min-height: 60px !important;
+        max-height: 60px !important;
+        z-index: 99999 !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        background: #10121b !important;
+    }
 
-/* Annulation des effets au survol */
-#side_container:hover #side_barre,
-#side_barre:hover {
-    height: 60px !important;
-    padding: 0 !important;
-    border-radius: 0 !important;
-    box-shadow: none !important;
-}
+    /* La barre interne réinitialisée pour tenir dans les 60px */
+    #side_barre {
+        position: static !important;
+        display: flex !important;
+        width: 100% !important;
+        height: 60px !important;
+        min-height: 60px !important;
+        max-height: 60px !important;
+        flex-direction: row !important;
+        justify-content: space-around !important;
+        align-items: center !important;
+        border-radius: 0 !important;
+        border: none !important;
+        border-top: 1px solid #1e293b !important;
+        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5) !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
 
-#side_container:hover {
-    padding: 0 !important;
-}
+    /* Annulation absolue des effets au survol du PC */
+    #side_container:hover #side_barre,
+    #side_barre:hover {
+        height: 60px !important;
+        padding: 0 !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+    }
 
-/* Disposition horizontale des icônes */
-.btn-top-down {
-    display: flex !important;
-    flex-direction: row !important;
-    align-items: center !important;
-    gap: 6px !important;
-    margin: 0 !important;
-}
+    #side_container:hover {
+        padding: 0 !important;
+    }
 
-.btn-ico {
-    width: 36px !important;
-    height: 36px !important;
-}
+    /* Disposition horizontale des icônes */
+    .btn-top-down {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        gap: 6px !important;
+        margin: 0 !important;
+        width: auto !important;
+    }
 
-#home {
-    display: none !important;
+    .btn-ico {
+        width: 36px !important;
+        height: 36px !important;
+        min-width: 36px !important;
+        max-width: 36px !important;
+        min-height: 36px !important;
+        max-height: 36px !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    .btn-ico .icon,
+    #side_barre img {
+        width: 20px !important;
+        height: 20px !important;
+        max-width: 20px !important;
+        max-height: 20px !important;
+        object-fit: contain !important;
+    }
+
+    #home {
+        display: none !important;
+    }
 }
 /*fin responsive pour les telephones*/
-
-
-
-
-

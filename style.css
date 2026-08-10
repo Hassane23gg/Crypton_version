@@ -202,11 +202,8 @@ body{
     border: none;
 }
 
-.bouton-color{
-    color: #777777;
-}
 
-.reglage-option{
+.theme-apk{
     color: #777777;
 }
 
@@ -309,7 +306,7 @@ input:checked + .slider::before{
 
 /*bouton de configuration des couleur vert dans le js*/
 .bouton-color{
-    color:#e6edf3 ;
+    color: #777777;
     display: flex;
     gap: 5px;
     flex-direction: column;

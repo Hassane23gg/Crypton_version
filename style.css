@@ -792,32 +792,36 @@ input:checked + .slider::before{
 /* 1. Neutralisation des styles par défaut d'Apple / Safari iOS */
 @media screen and (max-width: 768px) {
 
-    /* CORRECTION FORCEE DE LA COULEUR DE TEXTE SUR IPHONE (SAFARI/IOS) */
+    /* CORRECTION FORCEE EN NOIR POUR IPHONE (SAFARI/IOS) */
+    @media screen and (max-width: 768px) {
 
-    /* 1. Neutraliser la couleur bleue par défaut des boutons sur Safari */
-    button,
-    button *,
-    .btn-option,
-    .btn-ico,
-    .bouton-color,
-    .btn-fonds-ecran {
-        -webkit-appearance: none !important;
-        appearance: none !important;
-        color: inherit !important; /* Force la couleur du thème (blanc/noir) au lieu du bleu iOS */
-        -webkit-text-fill-color: currentColor !important; /* Empêche Safari d'appliquer sa propre couleur */
-    }
+        /* 1. Désactiver le style natif iOS et forcer l'écriture en noir sur les boutons et éléments interactifs */
+        button,
+        button *,
+        .btn-option,
+        .btn-ico,
+        .bouton-color,
+        .btn-fonds-ecran,
+        input, select, textarea {
+            -webkit-appearance: none !important;
+            -moz-appearance: none !important;
+            appearance: none !important;
+            color: #000000 !important;
+            -webkit-text-fill-color: #000000 !important;
+        }
 
-    /* 2. Empêcher Safari de passer les paragraphes et titres en bleu */
-    p, span, h1, h2, h3, div, .titre, .s-titre, .titre-option, .s-titre-option {
-        -webkit-text-fill-color: currentColor !important;
-        color: inherit !important;
-    }
+        /* 2. Forcer la couleur noire sur tous les textes, titres et sous-titres */
+        p, span, h1, h2, h3, div, .titre, .s-titre, .titre-option, .s-titre-option {
+            color: #000000 !important;
+            -webkit-text-fill-color: #000000 !important;
+        }
 
-    /* 3. Empêcher Safari de détecter du texte comme un numéro/lien bleu automatique */
-    a, [onclick] {
-        color: inherit !important;
-        text-decoration: none !important;
-        -webkit-text-fill-color: currentColor !important;
+        /* 3. Empêcher la détection automatique de texte/liens en bleu ou blanc par iOS */
+        a, [onclick] {
+            color: #000000 !important;
+            text-decoration: none !important;
+            -webkit-text-fill-color: #000000 !important;
+        }
     }
 
     button, input, select, textarea {

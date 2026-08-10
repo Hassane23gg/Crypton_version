@@ -294,7 +294,7 @@ function ThemeApp(theme){
                     <button onclick="Retour()" id="back">
                         <img class="back-icon" src="images/fleche-gauche.png" alt="touche retour">
                     </button><br>
-                    <div class="js-search-content">
+                   
                                      
                       <div class="reglage-option">
                         <button class="btn-option">
@@ -302,7 +302,7 @@ function ThemeApp(theme){
                             <p class="s-titre">Différents styles d'écritures</p>
                         </button>
                       </div>
-                    </div>;
+   
                     
                 </div>`;
             AfficherVueMobile('search');

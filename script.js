@@ -52,11 +52,11 @@ function BoutonContent(type){
                                               <p class="titre"><img class="logo-option-js" src="images/notification.png" alt="">Notification</p>
                                               <p class="s-titre">Messages, groupes et sons</p>
                                          </button>
-                                         <button class="btn-option">
+                                         <button class="btn-option" onclick="OpenOption('confidentialite')">
                                               <p class="titre"><img class="logo-option-js" src="images/fermer-a-cle.png" alt="">Confidentialité</p>
                                               <p class="s-titre">Compte, messages, profil</p>
                                          </button>
-                                         <button class="btn-option">
+                                         <button class="btn-option" onclick="OpenOption('langue')">
                                               <p class="titre"><img class="logo-option-js" src="images/global.png" alt="">Langue de l'application</p>
                                               <p class="s-titre">Les différentes langue de l'application</p>
                                          </button>

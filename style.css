@@ -156,6 +156,8 @@ body{
 
 /*bouton dans le java script*/
 
+/*pour le theme sombre*/
+
 #back{
     height: 40px;
     border: none;
@@ -199,7 +201,6 @@ body{
     border: none;
 }
 
-/*pour le theme sombre*/
 .btn-option:hover{
     transition: 0.5s;
     transform: scale(1.1);
@@ -511,10 +512,15 @@ input:checked + .slider::before{
 
 /*bouton de configuration des couleur bleue dans le js*/
 
+.theme-bleue .bouton-color{
+    color: white;
+}
+
 .theme-bleue .bouton-color:hover{
     background: #2b3a67;
     box-shadow: 0 0 15px rgba(37, 99, 235, 0.5),
     0 4px 6px -1px rgba(0, 0, 0, 0.3);
+    color: white;
 }
 
 /*hover fond d'ecran pour le theme bleue*/
@@ -595,10 +601,15 @@ input:checked + .slider::before{
 
 /*bouton de configuration des couleur rose dans le js*/
 
+.theme-rose .bouton-color{
+    color: white;
+}
+
 .theme-rose .bouton-color:hover{
     background:#26264f ;
     box-shadow: 0 0 20px rgba(236, 72, 153, 0.6),
     0 6px 10px -1px rgba(0, 0, 0, 0.4);
+    color: white;
 }
 
 /*hover fond d'ecran pour le theme rose*/
@@ -675,10 +686,15 @@ input:checked + .slider::before{
 
 /*bouton de configuration des couleur rouge dans le js*/
 
+.theme-rouge .bouton-color{
+    color: white;
+}
+
 .theme-rouge .bouton-color:hover{
     background: #2d1215;
     box-shadow: 0 4px 15px rgba(220, 38, 38, 0.5),
     0 0 8px rgba(234, 88, 12, 0.3);
+    color: #ffffff;
 }
 
 /*hover fond d'ecran pour le theme rouge*/
@@ -755,10 +771,15 @@ input:checked + .slider::before{
 
 /*bouton de configuration des couleur rouge dans le js*/
 
+.theme-violet .bouton-color{
+    color: white;
+}
+
 .theme-violet .bouton-color:hover{
     background: #1e1837;
     box-shadow: 0 4px 15px rgba(139, 92, 246, 0.5),
     0 0 8px rgba(99, 102, 241, 0.3);
+    color: #ffffff;
 }
 
 /*hover fond d'ecran pour le theme rouge*/

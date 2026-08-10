@@ -334,7 +334,7 @@ function DesactiverAutres(boutonActif){
 
 //fonction pour desactiver les theme
 function EnleverThemes(){
-
+    big_content.classList.remove("theme-light");
     big_content.classList.remove("theme-bleue");
     big_content.classList.remove("theme-rose");
     big_content.classList.remove("theme-rouge");
@@ -378,6 +378,7 @@ function OpenTheme(theme){
             activation.addEventListener("change", () => {
                 if (activation.checked) {
                     EnleverThemes();
+                    DesactiverAutres(activation);
                     big_content.classList.add("theme-light");
                     home.style.border = "none";
                     console.log("Thème clair activé");

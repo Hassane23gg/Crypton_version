@@ -554,6 +554,7 @@ input:checked + .slider::before{
 
 /*theme rose dans le js*/
 
+
 .theme-rose .theme-apk{
     color: white;
 }

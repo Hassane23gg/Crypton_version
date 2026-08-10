@@ -322,6 +322,7 @@ input:checked + .slider::before{
     background: #303239;
     cursor: pointer;
     padding: 20px;
+    color: white;
     border-radius: 10px;
     box-shadow: 0 0 15px #00ff88,
     0 4px 6px -1px rgba(0, 0, 0, 0.3);
@@ -480,6 +481,10 @@ input:checked + .slider::before{
     color: white;
 }
 
+.theme-bleue .theme-apk{
+    color: white;
+}
+
 .theme-bleue .btn-option:hover{
     background: linear-gradient(135deg, #1d4ed8, #0284c7);
     color: #fff;
@@ -548,6 +553,10 @@ input:checked + .slider::before{
 /*fin theme bleue dans le js*/
 
 /*theme rose dans le js*/
+
+.theme-rose .theme-apk{
+    color: white;
+}
 
 #big_content.theme-rose{
     background:#1a1a2e ;
@@ -641,6 +650,10 @@ input:checked + .slider::before{
 
 /*theme rouge dans le js*/
 
+.theme-rouge .theme-apk{
+    color: white;
+}
+
 #big_content.theme-rouge{
     background: #18080a;
     color: #fef2f2;
@@ -733,6 +746,10 @@ input:checked + .slider::before{
 #big_content.theme-violet{
     background: #0f0c1b;
     color: #f5f3ff;
+}
+
+.theme-violet .theme-apk{
+    color: white;
 }
 
 .theme-violet #side_barre{

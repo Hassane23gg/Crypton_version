@@ -792,6 +792,34 @@ input:checked + .slider::before{
 /* 1. Neutralisation des styles par défaut d'Apple / Safari iOS */
 @media screen and (max-width: 768px) {
 
+    /* CORRECTION FORCEE DE LA COULEUR DE TEXTE SUR IPHONE (SAFARI/IOS) */
+
+    /* 1. Neutraliser la couleur bleue par défaut des boutons sur Safari */
+    button,
+    button *,
+    .btn-option,
+    .btn-ico,
+    .bouton-color,
+    .btn-fonds-ecran {
+        -webkit-appearance: none !important;
+        appearance: none !important;
+        color: inherit !important; /* Force la couleur du thème (blanc/noir) au lieu du bleu iOS */
+        -webkit-text-fill-color: currentColor !important; /* Empêche Safari d'appliquer sa propre couleur */
+    }
+
+    /* 2. Empêcher Safari de passer les paragraphes et titres en bleu */
+    p, span, h1, h2, h3, div, .titre, .s-titre, .titre-option, .s-titre-option {
+        -webkit-text-fill-color: currentColor !important;
+        color: inherit !important;
+    }
+
+    /* 3. Empêcher Safari de détecter du texte comme un numéro/lien bleu automatique */
+    a, [onclick] {
+        color: inherit !important;
+        text-decoration: none !important;
+        -webkit-text-fill-color: currentColor !important;
+    }
+
     button, input, select, textarea {
         -webkit-appearance: none !important;
         -moz-appearance: none !important;

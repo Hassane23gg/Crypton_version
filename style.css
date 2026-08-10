@@ -850,11 +850,7 @@ input:checked + .slider::before{
 
 /*debut responsive pour les telephones*/
 
-/* ==========================================================================
-   1. SMARTPHONES (Portrait & Rotation Paysage)
-   ========================================================================== */
-@media screen and (max-width: 935px) and (orientation: landscape),
-screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
 
     html, body {
         width: 100%;
@@ -871,17 +867,17 @@ screen and (max-width: 768px) {
         position: relative !important;
     }
 
-    /* Ajustement de la hauteur du contenu pour laisser la place à la barre du bas */
+    /* Le contenu de recherche prend tout l'écran au-dessus de la barre */
     #search_content {
         width: 100% !important;
-        height: calc(100vh - 55px) !important;
-        height: calc(100svh - 55px) !important;
+        height: calc(100vh - 60px) !important;
+        height: calc(100svh - 60px) !important;
         overflow-y: auto !important;
         border-right: none !important;
         box-sizing: border-box !important;
     }
 
-    /* Barre conteneur fixée au bas de l'écran */
+    /* Le conteneur parent forcé tout en bas */
     #side_container {
         position: fixed !important;
         top: auto !important;
@@ -889,20 +885,20 @@ screen and (max-width: 768px) {
         left: 0 !important;
         right: 0 !important;
         width: 100% !important;
-        height: 55px !important;
+        height: 60px !important;
         z-index: 99999 !important;
         padding: 0 !important;
         margin: 0 !important;
         background: #10121b !important;
     }
 
-    /* Barre interne réinitialisée */
+    /* La barre interne réinitialisée pour tenir dans les 60px */
     #side_barre {
         position: static !important;
         width: 100% !important;
-        height: 55px !important;
-        min-height: 55px !important;
-        max-height: 55px !important;
+        height: 60px !important; /* Écrase les 727px du CSS Desktop */
+        min-height: 60px !important;
+        max-height: 60px !important;
         flex-direction: row !important;
         justify-content: space-around !important;
         align-items: center !important;
@@ -914,10 +910,10 @@ screen and (max-width: 768px) {
         margin: 0 !important;
     }
 
-    /* Annulation des effets de survol desktop */
+    /* Annulation absolue des effets au survol du PC */
     #side_container:hover #side_barre,
     #side_barre:hover {
-        height: 55px !important;
+        height: 60px !important;
         padding: 0 !important;
         border-radius: 0 !important;
         box-shadow: none !important;
@@ -937,40 +933,12 @@ screen and (max-width: 768px) {
     }
 
     .btn-ico {
-        width: 34px !important;
-        height: 34px !important;
+        width: 36px !important;
+        height: 36px !important;
     }
 
     #home {
         display: none !important;
-    }
-}
-
-/* ==========================================================================
-   2. TABLETTES (Format Portrait : ~769px à 1024px)
-   ========================================================================== */
-@media screen and (min-width: 769px) and (max-width: 1024px) and (orientation: portrait) {
-
-    #search_content {
-        height: calc(100vh - 65px) !important;
-        height: calc(100svh - 65px) !important;
-    }
-
-    #side_container,
-    #side_barre {
-        height: 65px !important;
-        min-height: 65px !important;
-        max-height: 65px !important;
-    }
-
-    #side_container:hover #side_barre,
-    #side_barre:hover {
-        height: 65px !important;
-    }
-
-    .btn-ico {
-        width: 40px !important;
-        height: 40px !important;
     }
 }
 /*fin responsive pour les telephones*/

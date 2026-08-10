@@ -791,18 +791,6 @@ input:checked + .slider::before{
 
 @media screen and (max-width: 768px) {
 
-    /* --- CORRECTION POUR DES ÉCRITURES NOIRES SUR IPHONE (SAFARI/IOS) --- */
-    button, input, select, textarea,
-    p, span, h1, h2, h3, div, a, [onclick],
-    .btn-option, .btn-ico, .bouton-color, .btn-fonds-ecran,
-    .titre, .s-titre, .titre-option, .s-titre-option {
-        -webkit-appearance: none !important;
-        -moz-appearance: none !important;
-        appearance: none !important;
-        color: #000000 !important;
-        -webkit-text-fill-color: #000000 !important;
-    }
-
     html, body {
         width: 100%;
         height: 100%;

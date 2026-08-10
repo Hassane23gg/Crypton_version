@@ -14,72 +14,7 @@ body{
     padding: 0;
 }
 
-/*responsive pour les telephone*/
-@media screen and (max-width: 768px) {
-    body, html {
-        overflow: hidden;
-        height: 100%;
-    }
 
-    #big_content {
-        flex-direction: column-reverse; /* Place la barre de navigation en bas */
-        height: 100vh;
-        width: 100vw;
-    }
-
-    /* Barre de navigation fixée en bas */
-    #side_container {
-        width: 100%;
-        height: 60px;
-        align-items: center;
-        justify-content: center;
-    }
-
-    #side_barre {
-        width: 100%;
-        height: 100%;
-        flex-direction: row; /* Icônes en ligne horizontalement */
-        justify-content: space-around;
-        align-items: center;
-        padding: 0 10px;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    /* Désactivation des effets hover spécifiques aux ordinateurs */
-    #side_container:hover #side_barre {
-        height: 100%;
-        border-radius: 0;
-        box-shadow: none;
-    }
-
-    #side_container:hover {
-        padding: 0;
-    }
-
-    .btn-top-down {
-        flex-direction: row;
-        gap: 15px;
-        margin: 0;
-    }
-
-    .btn-ico {
-        width: 40px;
-        height: 40px;
-    }
-
-    /* Panneau de contenu principal prenant tout l'écran */
-    #search_content {
-        width: 100%;
-        height: calc(100vh - 60px);
-        border-right: none;
-    }
-
-    /* Masquage de la zone d'accueil principale sur mobile */
-    #home {
-        display: none;
-    }
-}
-/*fin responsive pour les telephone*/
 
 #big_content{
     display: flex;
@@ -852,6 +787,77 @@ input:checked + .slider::before{
 
 /*fin disign js*/
 
+/*debut responsive pour les telephones*/
+
+@media screen and (max-width: 768px) {
+
+    html, body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    /* Passer l'affichage global en colonne inversée (barre en bas) */
+    #big_content {
+        flex-direction: column-reverse;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    /* Conteneur de la barre latérale fixe en bas */
+    #side_container {
+        width: 100% !important;
+        height: 60px !important;
+        padding: 0 !important;
+        transition: none !important;
+    }
+
+    /* Barre de navigation horizontale */
+    #side_barre {
+        width: 100% !important;
+        height: 100% !important;
+        flex-direction: row !important;
+        justify-content: space-around !important;
+        align-items: center !important;
+        border-radius: 0 !important;
+        border-top: 1px solid #1e293b;
+        box-shadow: none !important;
+    }
+
+    /* Annulation du survol responsive desktop */
+    #side_container:hover #side_barre {
+        height: 100% !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+    }
+
+    /* Alignement horizontal des groupes de boutons */
+    .btn-top-down {
+        flex-direction: row !important;
+        gap: 12px !important;
+        margin: 0 !important;
+    }
+
+    .btn-ico {
+        width: 38px !important;
+        height: 38px !important;
+    }
+
+    /* Zone de recherche sur tout l'écran au-dessus de la barre */
+    #search_content {
+        width: 100% !important;
+        height: calc(100vh - 60px) !important;
+        border-right: none !important;
+    }
+
+    /* Masquer la zone centrale/menu par défaut sur mobile */
+    #home {
+        display: none !important;
+    }
+}
+/*fin responsive pour les telephones*/
 
 
 

@@ -806,7 +806,7 @@ input:checked + .slider::before{
         position: relative !important;
     }
 
-    /* Contenu principal occupant tout l'écran au-dessus de la barre */
+    /* Le contenu de recherche prend tout l'écran au-dessus de la barre */
     #search_content {
         width: 100% !important;
         height: calc(100vh - 60px) !important;
@@ -816,7 +816,7 @@ input:checked + .slider::before{
         box-sizing: border-box !important;
     }
 
-    /* Forçage de la barre d'outils TOUT EN BAS de l'écran */
+    /* Le conteneur parent forcé tout en bas */
     #side_container {
         position: fixed !important;
         top: auto !important;
@@ -826,26 +826,34 @@ input:checked + .slider::before{
         width: 100% !important;
         height: 60px !important;
         z-index: 99999 !important;
-        background: #10121b !important;
         padding: 0 !important;
         margin: 0 !important;
+        background: #10121b !important;
     }
 
-    /* Disposition horizontale des icônes */
+    /* La barre interne réinitialisée pour tenir dans les 60px */
     #side_barre {
+        position: static !important;
         width: 100% !important;
-        height: 100% !important;
+        height: 60px !important; /* Écrase les 727px du CSS Desktop */
+        min-height: 60px !important;
+        max-height: 60px !important;
         flex-direction: row !important;
         justify-content: space-around !important;
         align-items: center !important;
         border-radius: 0 !important;
+        border: none !important;
         border-top: 1px solid #1e293b !important;
         box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5) !important;
+        padding: 0 !important;
+        margin: 0 !important;
     }
 
-    /* Desactivation des survols desktop */
-    #side_container:hover #side_barre {
-        height: 100% !important;
+    /* Annulation absolue des effets au survol du PC */
+    #side_container:hover #side_barre,
+    #side_barre:hover {
+        height: 60px !important;
+        padding: 0 !important;
         border-radius: 0 !important;
         box-shadow: none !important;
     }
@@ -854,17 +862,18 @@ input:checked + .slider::before{
         padding: 0 !important;
     }
 
-    /* Groupes d'icônes côte à côte */
+    /* Disposition horizontale des icônes */
     .btn-top-down {
         display: flex !important;
         flex-direction: row !important;
-        gap: 8px !important;
+        align-items: center !important;
+        gap: 6px !important;
         margin: 0 !important;
     }
 
     .btn-ico {
-        width: 38px !important;
-        height: 38px !important;
+        width: 36px !important;
+        height: 36px !important;
     }
 
     #home {

@@ -340,7 +340,7 @@ input:checked + .slider::before{
     display: flex;
     flex-direction: row;
     align-items: center;
-    color: white;
+    color: #777777;
     justify-content: center;
 }
 
@@ -353,7 +353,7 @@ input:checked + .slider::before{
     background: transparent;
     border: 1px solid transparent;
     width: 100%;
-    color:  white;
+    color:  #777777;
 }
 /*pour le vert*/
 

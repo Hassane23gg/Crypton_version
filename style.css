@@ -1,0 +1,796 @@
+/* INTERFACE */
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    overflow: hidden;
+}
+
+/*responsive pour les telephone*/
+@media screen and (max-width: 768px) {
+    #container {
+        display: flex;
+        flex-direction: column;
+    }
+}
+/*fin responsive pour les telephone*/
+
+#big_content{
+    display: flex;
+    flex-direction: row;
+    background: #0a0b10;
+    color:#e6edf3
+}
+
+
+
+#side_container{
+    width: 3.5%;
+    height: 727px;
+    display: flex;
+    align-items: center;
+}
+
+
+/* Toutes les zones */
+.box{
+    border: 1px solid black;
+}
+
+
+/* Sidebar */
+#side_barre{
+    width: 100%;
+    height: 727px;
+    overflow: hidden;
+    display: flex;
+    border: 1px solid transparent;
+    background: #10121b;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    transition: height 0.4s ease;
+}
+
+#side_barre:hover{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#side_container{
+    transition:  0.4s ease;
+}
+
+/* Réduction au survol */
+#side_container:hover #side_barre{
+    height: 450px;
+    border-radius: 20px;
+    border: 1px solid transparent;
+    box-shadow: 0 0 15px rgba(16, 185, 129, 0.5),
+    0 4px 6px -1px rgba(0, 0, 0, 0.3);
+}
+
+#side_container:hover{
+    padding: 10px;
+}
+
+
+/* Recherche */
+#search_content{
+    width: 26.5%;
+    height: 727px;
+    border-right: none;
+    background: #151824;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    animation: apparition 0.8s ease forwards;
+    overflow: auto;
+}
+
+@keyframes apparition {
+
+
+    0% {
+        opacity: 0;
+        transform: scale(0.5) translateY(50px);
+    }
+
+
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+
+}
+
+
+/* Menu principal */
+#home{
+    width: 70%;
+    height: 727px;
+}
+
+
+
+/* BOUTONS */
+
+
+.btn-top-down{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    margin: 3px;
+}
+
+
+
+.btn-ico{
+    width: 90%;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    background: #00ff88;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.btn-ico:hover{
+
+    transition: 0.5s;
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(16, 185, 129, 0.5),
+    0 4px 6px -1px rgba(0, 0, 0, 0.3);
+    background: white;
+}
+
+
+
+.icon{
+    width: 70%;
+}
+
+/*bouton dans le java script*/
+
+#back{
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    background: #00ff88;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+}
+
+#back:hover{
+    transition: 0.5s;
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #00ff88,
+    0 4px 6px -1px rgba(0, 0, 0, 0.3);
+    background: white;
+}
+
+.back-icon{
+    width: 25px;
+    height: 25px;
+}
+
+.logo-option-js{
+    width: 25px;
+    height: 25px;
+}
+
+.btn-option{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    line-height: 1.1;
+    width: 90%;
+    height: 70px;
+    background: transparent;
+    border: none;
+}
+
+/*pour le theme sombre*/
+.btn-option:hover{
+    transition: 0.5s;
+    transform: scale(1.1);
+    background: linear-gradient(#00ff88,rgba(16, 185, 129, 0.5));
+    color: white;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(16, 185, 129, 0.5),
+    0 4px 6px -1px rgba(0, 0, 0, 0.3);
+}
+
+/*pour le theme claire*/
+
+#big_content.theme-light{
+    background: #f8fafc;
+    color: #0f172a;
+    border-color: #e2e8f0;
+}
+
+
+.theme-light #side_barre{
+    background: #f1f5f9;
+    border: 1px solid #e2e8f0;
+}
+
+.theme-light #search_content{
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+}
+
+.theme-light .bouton-color{
+    color: black;
+}
+
+.theme-light .bouton-color:hover{
+    color: black;
+    background: #ffffff;
+}
+
+/* Boutons des options */
+
+
+
+.theme-light .btn-option:hover{
+    background: linear-gradient(#00ff88,rgba(16, 185, 129, 0.5));
+    color: #0f172a;
+    box-shadow:
+            0 10px 25px rgba(15,23,42,0.15);
+}
+
+/*bouton activer et desactiver*/
+.switch{
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 26px;
+}
+
+.switch input{
+    display: none;
+}
+
+.slider{
+    position: absolute;
+    cursor: pointer;
+
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #ccc;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.slider::before{
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 3px;
+    bottom: 3px;
+    background: white;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+/* ACTIVÉ */
+
+input:checked + .slider{
+    background: #00ff88;
+}
+
+input:checked + .slider::before{
+    transform: translateX(24px);
+}
+
+/*bouton de configuration des couleur vert dans le js*/
+.bouton-color{
+    color:#e6edf3 ;
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background: transparent;
+    border: 1px solid transparent;
+}
+
+.bouton-color:hover{
+    transition: 0.5s;
+    transform: scale(1.1);
+    background: #303239;
+    cursor: pointer;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #00ff88,
+    0 4px 6px -1px rgba(0, 0, 0, 0.3);
+}
+
+/*boutons fond d'ecran*/
+
+.ecrit-fd{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.box-btn-fonds-ecran{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: white;
+    justify-content: center;
+}
+
+.btn-fonds-ecran{
+   display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 5px;
+    background: transparent;
+    border: 1px solid transparent;
+    width: 100%;
+    color:  white;
+}
+/*pour le vert*/
+
+.box-btn-fonds-ecran:hover{
+    transition: 0.5s;
+    transform: scale(1.1);
+    background: #303239;
+    cursor: pointer;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #00ff88,
+    0 4px 6px -1px rgba(0, 0, 0, 0.3);
+}
+
+
+/*pour le theme claire*/
+
+.theme-light .btn-fonds-ecran{
+    color: #0f172a;
+}
+
+.theme-light .box-btn-fonds-ecran:hover{
+    background: white;
+    color: #0f172a;
+    box-shadow: 0 0 15px #00ff88,
+    0 4px 6px -1px rgba(0, 0, 0, 0.3);
+}
+
+.btn-fonds{
+    width: 10%;
+    border-radius: 10px;
+}
+
+/*fin boutons fonds d'ecran*/
+
+/*FIN BOUTONS*/
+
+/*element javascript*/
+
+.js-search-content{
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    animation: apparition 0.8s ease forwards;
+    overflow: auto;
+}
+
+.reglage-option{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    gap: 10px;
+}
+/*fin element js*/
+
+/*disign js*/
+.titre{
+    font-weight: bold;
+    font-size: large;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2px ;
+}
+
+.s-titre{
+  margin-top: 0;
+}
+
+.option{
+    width: 100%;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5em;
+    font-weight: bold;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    animation: apparition 0.8s ease forwards;
+    overflow: auto;
+}
+/*disposition dans les option*/
+.theme-apk{
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+}
+
+.bouton-color{
+    padding: 10px;
+}
+
+
+
+/*theme titre des option de js*/
+
+.titre-option{
+    font-size: 2em;
+
+}
+
+.s-titre-option{
+    font-size: large;
+}
+
+/*theme bleue dans le js*/
+#big_content.theme-bleue{
+   background: #0b132b;
+    color:#f8fafc;
+}
+
+.theme-bleue #side_barre{
+    background: #1c2541;
+    border: 1px solid #1e293b;
+}
+
+.theme-bleue #side_container:hover #side_barre{
+    box-shadow: 0 0 15px rgba(37, 99, 235, 0.5),
+    0 4px 6px -1px rgba(0, 0, 0, 0.3);
+}
+
+.theme-bleue .btn-option:hover{
+    background: linear-gradient(135deg, #1d4ed8, #0284c7);
+    color: #fff;
+    box-shadow: 0 0 15px rgba(37, 99, 235, 0.5),
+    0 4px 6px -1px rgba(0, 0, 0, 0.3);
+}
+
+.theme-bleue #search_content{
+    background: #162238;
+    border: 1px solid #1e293b;
+}
+
+.theme-bleue input:checked + .slider{
+    background: #2563eb;
+}
+
+.theme-bleue #home{
+    border: 1px solid #1e293b;
+}
+
+.theme-bleue .btn-ico{
+    background: #2563eb;
+}
+
+.theme-bleue .btn-ico:hover{
+    background: white;
+    box-shadow: 0 0 15px rgba(37, 99, 235, 0.5),
+    0 4px 6px -1px rgba(0, 0, 0, 0.3);
+}
+
+.theme-bleue #back{
+    background: #2563eb;
+}
+
+.theme-bleue #back:hover{
+    background: #ffffff;
+    box-shadow: 0 0 15px rgba(37, 99, 235, 0.5),
+    0 4px 6px -1px rgba(0, 0, 0, 0.3);
+}
+
+/*bouton de configuration des couleur bleue dans le js*/
+
+.theme-bleue .bouton-color:hover{
+    background: #2b3a67;
+    box-shadow: 0 0 15px rgba(37, 99, 235, 0.5),
+    0 4px 6px -1px rgba(0, 0, 0, 0.3);
+}
+
+/*hover fond d'ecran pour le theme bleue*/
+
+.theme-bleue .btn-fonds-ecran{
+    color: white;
+}
+
+.theme-bleue .box-btn-fonds-ecran:hover{
+    background: #2b3a67;
+    box-shadow: 0 0 15px rgba(37, 99, 235, 0.5),
+    0 4px 6px -1px rgba(0, 0, 0, 0.3);
+}
+
+/*fin theme bleue dans le js*/
+
+/*theme rose dans le js*/
+
+#big_content.theme-rose{
+    background:#1a1a2e ;
+    color:#fef2f2;
+}
+
+.theme-rose #side_barre{
+    background: #1f1f3a;
+    border: 1px solid #2a2a4f;
+}
+
+.theme-rose #side_container:hover #side_barre{
+    box-shadow: 0 0 20px rgba(236, 72, 153, 0.6),
+    0 6px 10px -1px rgba(0, 0, 0, 0.4);;
+}
+
+.theme-rose .btn-option:hover{
+    box-shadow: 0 0 20px rgba(236, 72, 153, 0.6),
+    0 6px 10px -1px rgba(0, 0, 0, 0.4);;
+}
+
+.theme-rose #search_content{
+    background: #26264f;
+    border: 1px solid #1e293b;
+}
+
+.theme-rose .btn-option:hover{
+        background: linear-gradient(135deg, #db2777, #8b5cf6);
+        box-shadow: 0 0 20px rgba(236, 72, 153, 0.6),
+        0 6px 10px -1px rgba(0, 0, 0, 0.4);;
+        color: #ffffff;
+}
+
+.theme-rose input:checked + .slider{
+    background: #ec4899;
+}
+
+.theme-rose #home{
+    border: 1px solid #1e293b;
+}
+
+.theme-rose .btn-ico{
+    background: #ec4899;
+}
+
+.theme-rose .btn-ico:hover{
+    background: white;
+    box-shadow: 0 0 20px rgba(236, 72, 153, 0.6),
+    0 6px 10px -1px rgba(0, 0, 0, 0.4);;
+}
+
+.theme-rose #back{
+    background: #ec4899;
+}
+
+.theme-rose #back:hover{
+    background: white;
+    box-shadow: 0 0 20px rgba(236, 72, 153, 0.6),
+    0 6px 10px -1px rgba(0, 0, 0, 0.4);
+}
+
+/*bouton de configuration des couleur rose dans le js*/
+
+.theme-rose .bouton-color:hover{
+    background:#26264f ;
+    box-shadow: 0 0 20px rgba(236, 72, 153, 0.6),
+    0 6px 10px -1px rgba(0, 0, 0, 0.4);
+}
+
+/*hover fond d'ecran pour le theme rose*/
+.theme-rose .box-btn-fonds-ecran:hover{
+    background:#26264f ;
+    box-shadow: 0 0 20px rgba(236, 72, 153, 0.6),
+    0 6px 10px -1px rgba(0, 0, 0, 0.4);
+}
+
+.theme-rose .btn-fonds-ecran{
+    color: white;
+}
+
+/*fin theme rose dans le js*/
+
+/*theme rouge dans le js*/
+
+#big_content.theme-rouge{
+    background: #18080a;
+    color: #fef2f2;
+}
+
+.theme-rouge #side_barre{
+    background: #220c0e;
+    border: 1px solid #3a171a;
+}
+
+.theme-rouge #side_container:hover #side_barre{
+    box-shadow: 0 4px 15px rgba(220, 38, 38, 0.5),
+    0 0 8px rgba(234, 88, 12, 0.3);
+}
+
+.theme-rouge .btn-option:hover{
+    background: linear-gradient(135deg, #dc2626, #ea580c); /* Dégradé rouge rubis/orange */
+    box-shadow: 0 4px 15px rgba(220, 38, 38, 0.5),
+    0 0 8px rgba(234, 88, 12, 0.3);
+    color: #ffffff;
+}
+
+.theme-rouge #search_content{
+    background: #2d1215;
+    border: 1px solid #3a171a ;
+}
+
+
+.theme-rouge input:checked + .slider{
+    background: #ef4444;
+}
+
+.theme-rouge #home{
+    border: 1px solid #3a171a;
+}
+
+.theme-rouge .btn-ico{
+    background:#ef4444;
+}
+
+.theme-rouge .btn-ico:hover{
+    background: white;
+    box-shadow: 0 4px 15px rgba(220, 38, 38, 0.5),
+    0 0 8px rgba(234, 88, 12, 0.3);
+
+}
+
+.theme-rouge #back{
+    background: #ef4444;
+}
+
+.theme-rouge #back:hover{
+    background: white;
+    box-shadow: 0 4px 15px rgba(220, 38, 38, 0.5),
+    0 0 8px rgba(234, 88, 12, 0.3);
+}
+
+/*bouton de configuration des couleur rouge dans le js*/
+
+.theme-rouge .bouton-color:hover{
+    background: #2d1215;
+    box-shadow: 0 4px 15px rgba(220, 38, 38, 0.5),
+    0 0 8px rgba(234, 88, 12, 0.3);
+}
+
+/*hover fond d'ecran pour le theme rouge*/
+.theme-rouge .box-btn-fonds-ecran:hover{
+    background: #2d1215;
+    box-shadow: 0 4px 15px rgba(220, 38, 38, 0.5),
+    0 0 8px rgba(234, 88, 12, 0.3);
+}
+
+.theme-rouge .btn-fonds-ecran{
+    color: white;
+}
+
+/*fin theme rouge dans le js*/
+
+/*theme violet dans le js*/
+
+#big_content.theme-rouge{
+    background: #0f0c1b;
+    color: #f5f3ff;
+}
+
+.theme-violet #side_barre{
+    background: #161228;
+    border: 1px solid #2d2452;
+}
+
+.theme-violet #side_container:hover #side_barre{
+    box-shadow: 0 4px 15px rgba(139, 92, 246, 0.5),
+    0 0 8px rgba(99, 102, 241, 0.3);;
+}
+
+.theme-violet .btn-option:hover{
+    background: linear-gradient(135deg, #7c3aed, #6366f1); /* Dégradé violet/indigo */
+    box-shadow: 0 6px 20px rgba(124, 58, 237, 0.45),
+    0 0 10px rgba(99, 102, 241, 0.3);
+    color: #ffffff;
+}
+
+.theme-violet #search_content{
+    background: #1e1837;
+    border: 1px solid #2d2452 ;
+}
+
+
+.theme-violet input:checked + .slider{
+    background: #8b5cf6;
+}
+
+.theme-violet #home{
+    border: 1px solid #2d2452 ;
+}
+
+.theme-violet .btn-ico{
+    background:#8b5cf6;
+}
+
+.theme-violet .btn-ico:hover{
+    background: white;
+    box-shadow: 0 4px 15px rgba(139, 92, 246, 0.5),
+    0 0 8px rgba(99, 102, 241, 0.3);
+
+}
+
+.theme-violet #back{
+    background: #8b5cf6;
+}
+
+.theme-violet #back:hover{
+    background: white;
+    box-shadow: 0 4px 15px rgba(139, 92, 246, 0.5),
+    0 0 8px rgba(99, 102, 241, 0.3);
+}
+
+/*bouton de configuration des couleur rouge dans le js*/
+
+.theme-violet .bouton-color:hover{
+    background: #1e1837;
+    box-shadow: 0 4px 15px rgba(139, 92, 246, 0.5),
+    0 0 8px rgba(99, 102, 241, 0.3);
+}
+
+/*hover fond d'ecran pour le theme rouge*/
+.theme-violet .box-btn-fonds-ecran:hover{
+    background: #1e1837;
+    box-shadow: 0 4px 15px rgba(139, 92, 246, 0.5),
+    0 0 8px rgba(99, 102, 241, 0.3);
+}
+
+.theme-violet .btn-fonds-ecran{
+    color: white;
+}
+
+/*fin theme violet dans le js*/
+
+/*fonction pour les fonds d'ecran*/
+
+/*fond d'ecran vert*/
+
+.Fond-ecran-ver #big_content{
+    background-image:url("fonds/497175.png") ;
+}
+/*fin fond d'ecran vert*/
+
+/*fin de fonction pour les fond d'ecran*/
+
+/*fin disign js*/
+
+
+
+
+
+

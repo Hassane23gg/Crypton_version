@@ -277,14 +277,33 @@ function ThemeApp(theme){
     }
 
     else if (theme==="ecriture"){
-        home.innerHTML = `ceci est les reglage de ecriture`;
+        home.innerHTML=`<div class="option">Réglage des écritures</div>`
+        search_content.innerHTML = `<div class="js-search-content">
+                                     
+                                            <div class="reglage-option">
+                                               <button class="btn-option">
+                                                   <p class="titre"><img class="logo-option-js" src="images/style.png" alt="">Style des écritures</p>
+                                                   <p class="s-titre">Différents styles d'écritures</p>
+                                               </button>
+                                            </div>
+                                      
+                                    </div>`;
         if (window.innerWidth <= 768) {
             search_content.innerHTML = `
                 <div class="js-search-content">
                     <button onclick="Retour()" id="back">
                         <img class="back-icon" src="images/fleche-gauche.png" alt="touche retour">
                     </button><br>
-                    <div>ceci est les reglage de ecriture</div>
+                    <div class="js-search-content">
+                                     
+                      <div class="reglage-option">
+                        <button class="btn-option">
+                            <p class="titre"><img class="logo-option-js" src="images/style.png" alt="">Style des écritures</p>
+                            <p class="s-titre">Différents styles d'écritures</p>
+                        </button>
+                      </div>
+                    </div>;
+                    
                 </div>`;
             AfficherVueMobile('search');
         } else {

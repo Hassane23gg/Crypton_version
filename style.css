@@ -789,67 +789,49 @@ input:checked + .slider::before{
 
 /*debut responsive pour les telephones*/
 
-/* 1. Neutralisation des styles par défaut d'Apple / Safari iOS */
+
 @media screen and (max-width: 768px) {
 
-    /* CORRECTION FORCEE EN NOIR POUR IPHONE (SAFARI/IOS) */
-    @media screen and (max-width: 768px) {
 
-        /* 1. Désactiver le style natif iOS et forcer l'écriture en noir sur les boutons et éléments interactifs */
-        button,
-        button *,
-        .btn-option,
-        .btn-ico,
-        .bouton-color,
-        .btn-fonds-ecran,
-        input, select, textarea {
-            -webkit-appearance: none !important;
-            -moz-appearance: none !important;
-            appearance: none !important;
-            color: #000000 !important;
-            -webkit-text-fill-color: #000000 !important;
-        }
-
-        /* 2. Forcer la couleur noire sur tous les textes, titres et sous-titres */
-        p, span, h1, h2, h3, div, .titre, .s-titre, .titre-option, .s-titre-option {
-            color: #000000 !important;
-            -webkit-text-fill-color: #000000 !important;
-        }
-
-        /* 3. Empêcher la détection automatique de texte/liens en bleu ou blanc par iOS */
-        a, [onclick] {
-            color: #000000 !important;
-            text-decoration: none !important;
-            -webkit-text-fill-color: #000000 !important;
-        }
-    }
-
-    button, input, select, textarea {
+    /* Désactive le style natif d'Apple et force l'écriture en noir sur les boutons */
+    button,
+    button *,
+    .btn-option,
+    .btn-ico,
+    .bouton-color,
+    .btn-fonds-ecran,
+    input, select, textarea {
         -webkit-appearance: none !important;
         -moz-appearance: none !important;
         appearance: none !important;
-        font-family: inherit;
-        color: inherit;
+        color: #000000 !important;
+        -webkit-text-fill-color: #000000 !important;
     }
 
-    html {
+    /* Force la couleur noire sur tous les textes, titres et sous-titres */
+    p, span, h1, h2, h3, div, .titre, .s-titre, .titre-option, .s-titre-option {
+        color: #000000 !important;
+        -webkit-text-fill-color: #000000 !important;
+    }
+
+    /* Empêche Safari de transformer automatiquement les textes/numéros en liens bleus */
+    a, [onclick] {
+        color: #000000 !important;
+        text-decoration: none !important;
+        -webkit-text-fill-color: #000000 !important;
+    }
+
+    /* --- 2. AGENCEMENT GENERAL ET STRUCTURE MOBILE --- */
+
+    html, body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
         -webkit-text-size-adjust: 100%;
-        width: 100%;
-        height: 100%;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
     }
 
-    body {
-        width: 100%;
-        height: 100%;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-    }
-
-    /* 2. Disposition principale */
     #big_content {
         display: block !important;
         width: 100% !important;
@@ -857,7 +839,7 @@ input:checked + .slider::before{
         position: relative !important;
     }
 
-    /* 3. Conteneur principal d'affichage sur mobile (search_content) */
+    /* Le contenu principal prend tout l'écran au-dessus de la barre de navigation */
     #search_content {
         width: 100% !important;
         height: calc(100vh - 60px) !important;
@@ -868,12 +850,13 @@ input:checked + .slider::before{
         padding-bottom: 20px !important;
     }
 
-    /* Masquage de la zone d'accueil principale sur mobile */
+    /* La zone de droite (PC) est masquée par défaut sur mobile */
     #home {
         display: none !important;
     }
 
-    /* 4. Ancrage fixe de la barre latérale tout en bas */
+    /* --- 3. BARRE DE NAVIGATION EN BAS (STYLE WHATSAPP) --- */
+
     #side_container {
         position: fixed !important;
         top: auto !important;
@@ -888,7 +871,6 @@ input:checked + .slider::before{
         background: #10121b !important;
     }
 
-    /* Réinitialisation de la barre pour la vue horizontale */
     #side_barre {
         position: static !important;
         width: 100% !important;
@@ -906,7 +888,7 @@ input:checked + .slider::before{
         margin: 0 !important;
     }
 
-    /* Annulation des effets hover du mode desktop */
+    /* Désactivation des effets au survol de la version Desktop */
     #side_container:hover #side_barre,
     #side_barre:hover {
         height: 60px !important;
@@ -919,7 +901,7 @@ input:checked + .slider::before{
         padding: 0 !important;
     }
 
-    /* Alignement des icônes de la barre */
+    /* Alignement des icônes */
     .btn-top-down {
         display: flex !important;
         flex-direction: row !important;
@@ -933,7 +915,8 @@ input:checked + .slider::before{
         height: 36px !important;
     }
 
-    /* 5. Adaptation du contenu des options sur mobile */
+    /* --- 4. ADAPTATION DES OPTIONS ET BOUTONS --- */
+
     .reglage-option {
         margin: 5px !important;
         gap: 8px !important;
@@ -947,27 +930,7 @@ input:checked + .slider::before{
         min-height: 60px !important;
         padding: 10px !important;
         box-sizing: border-box !important;
-        color: currentColor !important;
         -webkit-tap-highlight-color: transparent !important;
-    }
-
-    .titre {
-        font-size: 1rem !important;
-        gap: 8px !important;
-        -webkit-text-fill-color: initial !important;
-        color: inherit !important;
-    }
-
-    .s-titre {
-        font-size: 0.8rem !important;
-        margin-top: 3px !important;
-        -webkit-text-fill-color: initial !important;
-        color: inherit !important;
-    }
-
-    .titre-option, .s-titre-option {
-        -webkit-text-fill-color: initial !important;
-        color: inherit !important;
     }
 
     .theme-apk {

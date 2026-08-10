@@ -194,11 +194,20 @@ body{
     justify-content: center;
     align-items: center;
     margin: 0;
+    color: #777777;
     line-height: 1.1;
     width: 90%;
     height: 70px;
     background: transparent;
     border: none;
+}
+
+.bouton-color{
+    color: #777777;
+}
+
+.reglage-option{
+    color: #777777;
 }
 
 .btn-option:hover{
@@ -470,6 +479,10 @@ input:checked + .slider::before{
     0 4px 6px -1px rgba(0, 0, 0, 0.3);
 }
 
+.theme-bleue .btn-option{
+    color: white;
+}
+
 .theme-bleue .btn-option:hover{
     background: linear-gradient(135deg, #1d4ed8, #0284c7);
     color: #fff;
@@ -552,6 +565,10 @@ input:checked + .slider::before{
 .theme-rose #side_container:hover #side_barre{
     box-shadow: 0 0 20px rgba(236, 72, 153, 0.6),
     0 6px 10px -1px rgba(0, 0, 0, 0.4);;
+}
+
+.theme-rose .btn-option{
+    color: white;
 }
 
 .theme-rose .btn-option:hover{
@@ -642,6 +659,10 @@ input:checked + .slider::before{
     0 0 8px rgba(234, 88, 12, 0.3);
 }
 
+.theme-rouge .btn-option{
+    color: white;
+}
+
 .theme-rouge .btn-option:hover{
     background: linear-gradient(135deg, #dc2626, #ea580c); /* Dégradé rouge rubis/orange */
     box-shadow: 0 4px 15px rgba(220, 38, 38, 0.5),
@@ -712,7 +733,7 @@ input:checked + .slider::before{
 
 /*theme violet dans le js*/
 
-#big_content.theme-rouge{
+#big_content.theme-violet{
     background: #0f0c1b;
     color: #f5f3ff;
 }
@@ -725,6 +746,10 @@ input:checked + .slider::before{
 .theme-violet #side_container:hover #side_barre{
     box-shadow: 0 4px 15px rgba(139, 92, 246, 0.5),
     0 0 8px rgba(99, 102, 241, 0.3);;
+}
+
+.theme-violet .btn-option{
+    color: white;
 }
 
 .theme-violet .btn-option:hover{

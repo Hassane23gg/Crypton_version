@@ -799,27 +799,39 @@ input:checked + .slider::before{
         overflow: hidden;
     }
 
-    /* Passer en colonne inversée pour mettre le premier élément HTML (#side_container) tout en bas */
     #big_content {
-        display: flex !important;
-        flex-direction: column-reverse !important;
+        display: block !important;
         width: 100% !important;
         height: 100% !important;
-        height: 100svh !important;
+        position: relative !important;
     }
 
-    /* La barre latérale passe en bas */
+    /* Contenu principal occupant tout l'écran au-dessus de la barre */
+    #search_content {
+        width: 100% !important;
+        height: calc(100vh - 60px) !important;
+        height: calc(100svh - 60px) !important;
+        overflow-y: auto !important;
+        border-right: none !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Forçage de la barre d'outils TOUT EN BAS de l'écran */
     #side_container {
+        position: fixed !important;
+        top: auto !important;
+        bottom: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
         width: 100% !important;
         height: 60px !important;
-        min-height: 60px !important;
-        padding: 0 !important;
-        padding-bottom: env(safe-area-inset-bottom, 0px) !important;
+        z-index: 99999 !important;
         background: #10121b !important;
-        transition: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
     }
 
-    /* Style de la barre de navigation */
+    /* Disposition horizontale des icônes */
     #side_barre {
         width: 100% !important;
         height: 100% !important;
@@ -827,20 +839,11 @@ input:checked + .slider::before{
         justify-content: space-around !important;
         align-items: center !important;
         border-radius: 0 !important;
-        border-top: 1px solid #1e293b;
-        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.4) !important;
+        border-top: 1px solid #1e293b !important;
+        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5) !important;
     }
 
-    /* Le contenu prend tout l'espace disponible au-dessus de la barre */
-    #search_content {
-        flex: 1 !important;
-        width: 100% !important;
-        height: auto !important;
-        border-right: none !important;
-        overflow-y: auto !important;
-    }
-
-    /* Neutralisation des survols desktop */
+    /* Desactivation des survols desktop */
     #side_container:hover #side_barre {
         height: 100% !important;
         border-radius: 0 !important;
@@ -851,11 +854,11 @@ input:checked + .slider::before{
         padding: 0 !important;
     }
 
-    /* Alignement horizontal des icônes */
+    /* Groupes d'icônes côte à côte */
     .btn-top-down {
         display: flex !important;
         flex-direction: row !important;
-        gap: 10px !important;
+        gap: 8px !important;
         margin: 0 !important;
     }
 

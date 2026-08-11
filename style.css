@@ -836,6 +836,8 @@ input:checked + .slider::before{
         width: 100% !important;
         height: 100% !important;
         position: relative !important;
+        align-items: center !important;
+        justify-content: center !important;
     }
 
     /* Le contenu de recherche prend tout l'écran au-dessus de la barre */
@@ -853,6 +855,10 @@ input:checked + .slider::before{
         position: fixed !important;
         top: auto !important;
         bottom: 0 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
         left: 0 !important;
         right: 0 !important;
         width: 100% !important;
@@ -860,28 +866,27 @@ input:checked + .slider::before{
         min-height: 60px !important;
         max-height: 60px !important;
         z-index: 99999 !important;
-        padding: 0 !important;
-        margin: 0 !important;
-        background: #10121b !important;
+        margin: 10px !important;
+        background: transparent !important;
+
     }
 
     /* La barre interne réinitialisée pour tenir dans les 60px */
     #side_barre {
         position: static !important;
         display: flex !important;
-        width: 100% !important;
+        width: 80% !important;
         height: 60px !important;
         min-height: 60px !important;
         max-height: 60px !important;
         flex-direction: row !important;
         justify-content: space-around !important;
         align-items: center !important;
-        border-radius: 0 !important;
+        border-radius: 20px !important;
         border: none !important;
         border-top: 1px solid #1e293b !important;
         box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5) !important;
-        padding: 0 !important;
-        margin: 0 !important;
+
     }
 
     /* Annulation absolue des effets au survol du PC */

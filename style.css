@@ -869,7 +869,7 @@ input:checked + .slider::before{
         position: relative !important;
         display: flex !important;
         width: 100% !important; /* Ajustable selon la largeur souhaitée */
-        max-width: 480px !important;
+        max-width: 400px !important;
         height: 70px !important;
         background: transparent !important;
         flex-direction: row !important;
@@ -917,18 +917,18 @@ input:checked + .slider::before{
     .btn-ico {
         width: 36px !important;
         height: 36px !important;
-        min-width: 50px !important;
-        max-width: 50px !important;
-        min-height: 50px !important;
-        max-height: 50px !important;
+        min-width: 40px !important;
+        max-width: 40px !important;
+        min-height: 40px !important;
+        max-height: 40px !important;
         padding: 0 !important;
         margin: 0 !important;
     }
 
     .btn-ico .icon,
     #side_barre img {
-        width: 25px !important;
-        height: 25px !important;
+        width: 20px !important;
+        height: 20px !important;
         max-width: 30px !important;
         max-height: 30px !important;
         object-fit: contain !important;

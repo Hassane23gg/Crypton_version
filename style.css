@@ -850,35 +850,30 @@ input:checked + .slider::before{
         box-sizing: border-box !important;
     }
 
-    /* Le conteneur parent forcé tout en bas */
+    /* Le conteneur parent centré tout en bas */
     #side_container {
         position: fixed !important;
-        top: auto !important;
-        bottom: 0 !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        text-align: center !important;
+        bottom: 15px !important; /* Spacing depuis le bas */
         left: 0 !important;
         right: 0 !important;
         width: 100% !important;
         height: 60px !important;
-        min-height: 60px !important;
-        max-height: 60px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
         z-index: 99999 !important;
-        margin: 10px !important;
+        margin: 0 !important; /* Supression du margin: 10px qui décalait la barre */
         background: transparent !important;
-
+        box-sizing: border-box !important;
     }
 
-    /* La barre interne réinitialisée pour tenir dans les 60px */
+    /* La barre interne réinitialisée et centrée */
     #side_barre {
-        position: static !important;
+        position: relative !important;
         display: flex !important;
-        width: 80% !important;
+        width: 100% !important; /* Ajustable selon la largeur souhaitée */
+        max-width: 400px !important;
         height: 60px !important;
-        min-height: 60px !important;
-        max-height: 60px !important;
         flex-direction: row !important;
         justify-content: space-around !important;
         align-items: center !important;
@@ -886,7 +881,8 @@ input:checked + .slider::before{
         border: none !important;
         border-top: 1px solid #1e293b !important;
         box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5) !important;
-
+        margin: 0 auto !important;
+        box-sizing: border-box !important;
     }
 
     /* Annulation absolue des effets au survol du PC */

@@ -868,8 +868,8 @@ input:checked + .slider::before{
     #side_barre {
         position: relative !important;
         display: flex !important;
-        width: 80% !important; /* Ajustable selon la largeur souhaitée */
-        max-width: 400px !important;
+        width: 100% !important; /* Ajustable selon la largeur souhaitée */
+        max-width: 480px !important;
         height: 70px !important;
         background: transparent !important;
         flex-direction: row !important;
@@ -910,10 +910,10 @@ input:checked + .slider::before{
     .btn-ico {
         width: 36px !important;
         height: 36px !important;
-        min-width: 36px !important;
-        max-width: 36px !important;
-        min-height: 36px !important;
-        max-height: 36px !important;
+        min-width: 45px !important;
+        max-width: 45px !important;
+        min-height: 45px !important;
+        max-height: 45px !important;
         padding: 0 !important;
         margin: 0 !important;
     }

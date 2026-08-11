@@ -869,7 +869,7 @@ input:checked + .slider::before{
         position: relative !important;
         display: flex !important;
         width: 100% !important; /* Ajustable selon la largeur souhaitée */
-        max-width: 380px !important;
+        max-width: 400px !important;
         height: 70px !important;
         background: transparent !important;
         flex-direction: row !important;

@@ -871,9 +871,10 @@ input:checked + .slider::before{
     #side_barre {
         position: relative !important;
         display: flex !important;
-        width: 100% !important; /* Ajustable selon la largeur souhaitée */
+        width: 80% !important; /* Ajustable selon la largeur souhaitée */
         max-width: 400px !important;
         height: 60px !important;
+        background: transparent !important;
         flex-direction: row !important;
         justify-content: space-around !important;
         align-items: center !important;

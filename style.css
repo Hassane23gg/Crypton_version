@@ -868,7 +868,7 @@ input:checked + .slider::before{
     #side_barre {
         position: relative !important;
         display: flex !important;
-        width: 100% !important; /* Ajustable selon la largeur souhaitée */
+        width: 80% !important; /* Ajustable selon la largeur souhaitée */
         max-width: 380px !important;
         height: 70px !important;
         background: transparent !important;

@@ -276,6 +276,10 @@ function ThemeApp(theme){
             FondVert.addEventListener('change', () => {
                 if (FondVert.checked) {
                     big_content.classList.add('Fond-ecran-vert');
+                        ;
+
+
+
                 } else {
                     big_content.classList.remove('Fond-ecran-vert');
                 }

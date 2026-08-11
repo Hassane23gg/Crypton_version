@@ -808,9 +808,6 @@ input:checked + .slider::before{
 
 /*fond d'ecran vert*/
 
-.Fond-ecran-ver #big_content{
-    background-image:url("fonds/497175.png") ;
-}
 /*fin fond d'ecran vert*/
 
 /*fin de fonction pour les fond d'ecran*/
@@ -874,7 +871,7 @@ input:checked + .slider::before{
         width: 80% !important; /* Ajustable selon la largeur souhaitée */
         max-width: 400px !important;
         height: 70px !important;
-        background: transparent !important;
+        background: #10121b !important;
         flex-direction: row !important;
         justify-content: space-around !important;
         align-items: center !important;
@@ -894,6 +891,7 @@ input:checked + .slider::before{
         border-radius: 20px !important;
         border-top: 1px solid #b6b6b6 !important;
         box-shadow: 0 -2px 10px rgba(136, 136, 136, 0.5) !important;
+        background: transparent !important;
     }
 
     #side_container:hover {

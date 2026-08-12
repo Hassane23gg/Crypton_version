@@ -529,95 +529,91 @@ input:checked + .slider::before{
 /*theme rose dans le js*/
 
 .theme-rose .theme-apk{
-    color: white;
-}
-
-#big_content.theme-rose{
-    background:#1a1a2e ;
-    color:#fef2f2;
-}
-
-.theme-rose #side_barre{
-    background: #1f1f3a;
-    border: 1px solid #2a2a4f;
-}
-
-.theme-rose #side_container:hover #side_barre{
-    box-shadow: 0 0 20px rgba(236, 72, 153, 0.6),
-    0 6px 10px -1px rgba(0, 0, 0, 0.4);;
-}
-
-.theme-rose .btn-option{
-    color: white;
-}
-
-.theme-rose .btn-option:hover{
-    box-shadow: 0 0 20px rgba(236, 72, 153, 0.6),
-    0 6px 10px -1px rgba(0, 0, 0, 0.4);;
-}
-
-.theme-rose #search_content{
-    background: #26264f;
-    border: 1px solid #1e293b;
-}
-
-.theme-rose .btn-option:hover{
-    background: linear-gradient(135deg, #db2777, #8b5cf6);
-    box-shadow: 0 0 20px rgba(236, 72, 153, 0.6),
-    0 6px 10px -1px rgba(0, 0, 0, 0.4);;
     color: #ffffff;
 }
 
+#big_content.theme-rose{
+    background: #3A1629;
+    color: #ffffff;
+}
+
+.theme-rose #side_barre{
+    background: #250C1B;
+    border: 1px solid #4D1F38;
+}
+
+.theme-rose #side_container:hover #side_barre{
+    box-shadow: 0 0 20px rgba(244, 114, 182, 0.4),
+    0 6px 10px -1px rgba(0, 0, 0, 0.4);
+}
+
+.theme-rose .btn-option{
+    color: #ffffff;
+}
+
+.theme-rose .btn-option:hover{
+    background: linear-gradient(135deg, #f472b6, #db2777);
+    box-shadow: 0 0 20px rgba(244, 114, 182, 0.5),
+    0 6px 10px -1px rgba(0, 0, 0, 0.4);
+    color: #ffffff;
+}
+
+.theme-rose #search_content{
+    background: #7a355b;
+    border: 1px solid #632647;
+}
+
 .theme-rose input:checked + .slider{
-    background: #ec4899;
+    background: #f472b6;
 }
 
 .theme-rose #home{
-    border: 1px solid #1e293b;
+    background: #4A1C35;
+    border: 1px solid #632647;
 }
 
 .theme-rose .btn-ico{
-    background: #ec4899;
+    background: #f472b6;
 }
 
 .theme-rose .btn-ico:hover{
-    background: white;
-    box-shadow: 0 0 20px rgba(236, 72, 153, 0.6),
-    0 6px 10px -1px rgba(0, 0, 0, 0.4);;
+    background: #fbcfe8;
+    box-shadow: 0 0 20px rgba(244, 114, 182, 0.6),
+    0 6px 10px -1px rgba(0, 0, 0, 0.4);
 }
 
 .theme-rose #back{
-    background: #ec4899;
+    background: #f472b6;
 }
 
 .theme-rose #back:hover{
-    background: white;
-    box-shadow: 0 0 20px rgba(236, 72, 153, 0.6),
+    background: #fbcfe8;
+    box-shadow: 0 0 20px rgba(244, 114, 182, 0.6),
     0 6px 10px -1px rgba(0, 0, 0, 0.4);
 }
 
 /*bouton de configuration des couleur rose dans le js*/
 
 .theme-rose .bouton-color{
-    color: white;
+    color: #ffffff;
 }
 
 .theme-rose .bouton-color:hover{
-    background:#26264f ;
-    box-shadow: 0 0 20px rgba(236, 72, 153, 0.6),
+    background: #250C1B;
+    box-shadow: 0 0 20px rgba(244, 114, 182, 0.4),
     0 6px 10px -1px rgba(0, 0, 0, 0.4);
-    color: white;
+    color: #ffffff;
 }
 
 /*hover fond d'ecran pour le theme rose*/
 .theme-rose .box-btn-fonds-ecran:hover{
-    background:#26264f ;
-    box-shadow: 0 0 20px rgba(236, 72, 153, 0.6),
+    background: #521F3C;
+    box-shadow: 0 0 20px rgba(244, 114, 182, 0.4),
     0 6px 10px -1px rgba(0, 0, 0, 0.4);
 }
 
 .theme-rose .btn-fonds-ecran{
-    color: white;
+    color: #ffffff;
 }
 
 /*fin theme rose dans le js*/

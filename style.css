@@ -144,6 +144,7 @@ body, html {
     border: none;
     cursor: pointer;
     background: #00ff88;
+    overflow: hidden;
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -860,6 +861,14 @@ input:checked + .slider::before{
     transition: 0.9s ;
 }
 
+.Fond-ecran-vert .bouton-color:hover{
+   background: #34674d;
+}
+
+.Fond-ecran-vert .box-btn-fonds-ecran:hover{
+    background: #34674d;
+}
+
 /*fin fond d'ecran vert*/
 
 /*debut fond d'ecran bleue*/
@@ -1310,6 +1319,27 @@ input:checked + .slider::before{
 
     #home {
         display: none !important;
+    }
+
+
+
+    .reglage-option {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 15px !important;
+        margin-bottom: 90px !important;
+    }
+
+
+    .box-btn-fonds-ecran {
+        display: flex !important;
+        width: 100% !important;
+        height: auto !important;
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        padding: 10px !important;
+        box-sizing: border-box !important;
     }
 }
 /*fin responsive pour les telephones*/

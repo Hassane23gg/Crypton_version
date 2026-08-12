@@ -68,6 +68,39 @@ function BoutonContent(type){
     }
 }
 
+// fonction pour desactiver les boutons des fond d'ecran
+function DesactiverBoutonFondEcran(boutonActiver){
+
+    const boutons = [
+        document.getElementById("FondVert"),
+        document.getElementById("FondBleue"),
+        document.getElementById("FondRose"),
+        document.getElementById("FondRouge"),
+        document.getElementById("FondViolet"),
+    ];
+
+    boutons.forEach(bouton => {
+
+        if(bouton && bouton !== boutonActiver){
+            bouton.checked = false;
+        }
+
+    });
+
+}
+
+// fonction pour enlever fond d'ecran
+function EnleverFondEcran(){
+    big_content.classList.remove("theme-light");
+    big_content.classList.remove("Fond-ecran-vert");
+    big_content.classList.remove("Fond-ecran-bleue");
+    big_content.classList.remove("Fond-ecran-rose");
+    big_content.classList.remove("Fond-ecran-rouge")
+    big_content.classList.remove("Fond-ecran-violet")
+
+
+}
+
 // fonction pour ouvrir les options
 function OpenOption(type){
 
@@ -170,6 +203,7 @@ function OpenOption(type){
     }
 }
 
+
 // fonction du reglage du theme de l'appliction
 function ThemeApp(theme){
 
@@ -219,7 +253,7 @@ function ThemeApp(theme){
                                          <img class="btn-fonds" src="fonds/354971.jpg" alt="">
                                      </button>
                                      <label class="switch">
-                                          <input type="checkbox" id="activation">
+                                          <input type="checkbox" id="FondBleue">
                                           <span class="slider"></span>
                                       </label>
                                   </div>
@@ -229,7 +263,7 @@ function ThemeApp(theme){
                                          <img class="btn-fonds" src="fonds/669283.jpg" alt="">
                                       </button>
                                       <label class="switch">
-                                          <input type="checkbox" id="activation">
+                                          <input type="checkbox" id="FondRose">
                                           <span class="slider"></span>
                                       </label>
                                   </div>
@@ -239,7 +273,7 @@ function ThemeApp(theme){
                                          <img class="btn-fonds" src="fonds/118285.jpg" alt="">
                                       </button>
                                       <label class="switch">
-                                          <input type="checkbox" id="activation">
+                                          <input type="checkbox" id="FondRouge">
                                           <span class="slider"></span>
                                       </label>
                                   </div>
@@ -249,7 +283,7 @@ function ThemeApp(theme){
                                          <img class="btn-fonds" src="fonds/418894.jpg" alt="">
                                       </button>
                                       <label class="switch">
-                                          <input type="checkbox" id="activation">
+                                          <input type="checkbox" id="FondViolet">
                                           <span class="slider"></span>
                                       </label>
                                   </div>
@@ -271,20 +305,75 @@ function ThemeApp(theme){
             AfficherVueMobile('home');
         }
 
+        // fonction pour le fond d'ecran vert
         const FondVert = document.getElementById("FondVert");
         if(FondVert) {
             FondVert.addEventListener('change', () => {
+                DesactiverBoutonFondEcran(FondVert);
+                EnleverFondEcran()
                 if (FondVert.checked) {
                     big_content.classList.add('Fond-ecran-vert');
-                        ;
-
-
 
                 } else {
                     big_content.classList.remove('Fond-ecran-vert');
                 }
             });
         }
+
+        // fonction pour le fond d'ecran bleue
+        const FondBleue = document.getElementById("FondBleue");
+        FondBleue.addEventListener("change", () => {
+            DesactiverBoutonFondEcran(FondBleue);
+            EnleverFondEcran()
+            if (FondBleue.checked) {
+                big_content.classList.add('Fond-ecran-bleue');
+            }
+
+            else{
+                big_content.classList.remove('Fond-ecran-bleue');
+            }
+        })
+
+        // fonction pour le fond d'ecran rose
+        const FondRose = document.getElementById("FondRose");
+        FondRose.addEventListener("change", () => {
+            DesactiverBoutonFondEcran(FondRose);
+            EnleverFondEcran()
+            if (FondRose.checked) {
+                big_content.classList.add('Fond-ecran-rose');
+            }
+            else{
+                big_content.classList.remove('Fond-ecran-rose');
+            }
+        })
+
+        // fonction pour le fond d'ecran rouge
+        const FondRouge = document.getElementById("FondRouge");
+        FondRouge.addEventListener("change", () => {
+            if (FondRouge.checked) {
+                DesactiverBoutonFondEcran(FondRouge);
+                EnleverFondEcran()
+                big_content.classList.add('Fond-ecran-rouge');
+            }
+
+            else{
+                big_content.classList.remove('Fond-ecran-rouge');
+            }
+        })
+
+        // fonction pour le fond d'ecran violet
+        const FondViolet = document.getElementById("FondViolet");
+        FondViolet.addEventListener('change', () => {
+            if (FondViolet.checked) {
+                DesactiverBoutonFondEcran(FondViolet);
+                EnleverFondEcran()
+                big_content.classList.add('Fond-ecran-violet');
+            }
+
+            else{
+                big_content.classList.remove('Fond-ecran-violet');
+            }
+        })
 
     }
 
@@ -331,7 +420,7 @@ function DesactiverAutres(boutonActif){
         document.getElementById("BleueColor"),
         document.getElementById("RoseColor"),
         document.getElementById("RougeColor"),
-        document.getElementById("VioletColor")
+        document.getElementById("VioletColor"),
     ];
 
     boutons.forEach(bouton => {
@@ -389,6 +478,7 @@ function OpenTheme(theme){
         if(activation) {
             activation.addEventListener("change", () => {
                 if (activation.checked) {
+                    EnleverFondEcran()
                     EnleverThemes();
                     DesactiverAutres(activation);
                     big_content.classList.add("theme-light");

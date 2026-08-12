@@ -204,6 +204,7 @@ body, html {
     background: #f8fafc;
     color: #0f172a;
     border-color: #e2e8f0;
+    transition: 0.9s ;
 }
 
 .theme-light #side_barre{
@@ -214,6 +215,7 @@ body, html {
 .theme-light #search_content{
     background: #ffffff;
     border: 1px solid #e2e8f0;
+    transition: 0.9s ;
 }
 
 .theme-light .bouton-color{
@@ -439,6 +441,7 @@ input:checked + .slider::before{
 #big_content.theme-bleue{
     background: #0b132b;
     color:#f8fafc;
+    transition: 0.9s ;
 }
 
 .theme-bleue #side_barre{
@@ -469,6 +472,7 @@ input:checked + .slider::before{
 .theme-bleue #search_content{
     background: #162238;
     border: 1px solid #1e293b;
+    transition: 0.9s ;
 }
 
 .theme-bleue input:checked + .slider{
@@ -477,6 +481,7 @@ input:checked + .slider::before{
 
 .theme-bleue #home{
     border: 1px solid #1e293b;
+    transition: 0.9s ;
 }
 
 .theme-bleue .btn-ico{
@@ -535,6 +540,7 @@ input:checked + .slider::before{
 #big_content.theme-rose{
     background: #3A1629;
     color: #ffffff;
+    transition: 0.9s ;
 }
 
 .theme-rose #side_barre{
@@ -561,6 +567,7 @@ input:checked + .slider::before{
 .theme-rose #search_content{
     background: #7a355b;
     border: 1px solid #632647;
+    transition: 0.9s ;
 }
 
 .theme-rose input:checked + .slider{
@@ -570,6 +577,7 @@ input:checked + .slider::before{
 .theme-rose #home{
     background: #4A1C35;
     border: 1px solid #632647;
+    transition: 0.9s ;
 }
 
 .theme-rose .btn-ico{
@@ -627,6 +635,7 @@ input:checked + .slider::before{
 #big_content.theme-rouge{
     background: #18080a;
     color: #fef2f2;
+    transition: 0.9s ;
 }
 
 .theme-rouge #side_barre{
@@ -653,6 +662,7 @@ input:checked + .slider::before{
 .theme-rouge #search_content{
     background: #2d1215;
     border: 1px solid #3a171a ;
+    transition: 0.9s ;
 }
 
 .theme-rouge input:checked + .slider{
@@ -661,6 +671,7 @@ input:checked + .slider::before{
 
 .theme-rouge #home{
     border: 1px solid #3a171a;
+    transition: 0.9s ;
 }
 
 .theme-rouge .btn-ico{
@@ -714,6 +725,7 @@ input:checked + .slider::before{
 #big_content.theme-violet{
     background: #0f0c1b;
     color: #f5f3ff;
+    transition: 0.9s ;
 }
 
 .theme-violet .theme-apk{
@@ -744,6 +756,7 @@ input:checked + .slider::before{
 .theme-violet #search_content{
     background: #1e1837;
     border: 1px solid #2d2452 ;
+    transition: 0.9s ;
 }
 
 .theme-violet input:checked + .slider{
@@ -752,6 +765,7 @@ input:checked + .slider::before{
 
 .theme-violet #home{
     border: 1px solid #2d2452 ;
+    transition: 0.9s ;
 }
 
 .theme-violet .btn-ico{
@@ -774,7 +788,7 @@ input:checked + .slider::before{
     0 0 8px rgba(99, 102, 241, 0.3);
 }
 
-/*bouton de configuration des couleur rouge dans le js*/
+/*bouton de configuration des couleur violet dans le js*/
 
 .theme-violet .bouton-color{
     color: white;
@@ -787,7 +801,7 @@ input:checked + .slider::before{
     color: #ffffff;
 }
 
-/*hover fond d'ecran pour le theme rouge*/
+/*hover fond d'ecran pour le theme violet*/
 .theme-violet .box-btn-fonds-ecran:hover{
     background: #1e1837;
     box-shadow: 0 4px 15px rgba(139, 92, 246, 0.5),
@@ -803,8 +817,377 @@ input:checked + .slider::before{
 /*fonction pour les fonds d'ecran*/
 
 /*fond d'ecran vert*/
+#big_content.Fond-ecran-vert{
+    background-image: url("fonds/400218.jpg");
+    backdrop-filter: blur(50px);
+    transition: 0.9s ;
+}
+
+.Fond-ecran-vert #home{
+    background-color: #0a0b10;
+    opacity: 0.9;
+    transition: 0.9s ;
+}
+
+.Fond-ecran-vert.btn-ico:hover{
+    transition: 0.5s;
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(16, 185, 129, 0.5),
+    0 4px 6px -1px rgba(0, 0, 0, 0.3);
+    background: white;
+}
+
+.Fond-ecran-vert #back:hover{
+    transition: 0.5s;
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #00ff88,
+    0 4px 6px -1px rgba(0, 0, 0, 0.3);
+    background: white;
+}
+
+
+.Fond-ecran-vert #side_barre{
+    opacity: 0.7;
+
+}
+
+.Fond-ecran-vert #side_barre:hover{
+    opacity: 0.7;
+}
+
+.Fond-ecran-vert #search_content{
+    background-color: rgba(21, 24, 36, 0.7);
+    transition: 0.9s ;
+}
 
 /*fin fond d'ecran vert*/
+
+/*debut fond d'ecran bleue*/
+
+#big_content.Fond-ecran-bleue{
+    background-image: url("fonds/354971.jpg");
+    backdrop-filter: blur(50px);
+    transition: 0.9s ;
+}
+
+.Fond-ecran-bleue #home{
+    background-color: #0a0b10;
+    opacity: 0.9;
+    transition: 0.9s ;
+}
+
+.Fond-ecran-bleue #side_barre{
+    opacity: 0.7;
+
+}
+
+.Fond-ecran-bleue #side_barre:hover{
+    opacity: 0.7;
+}
+
+.Fond-ecran-bleue #search_content{
+    background-color: rgba(21, 24, 36, 0.7);
+    transition: 0.9s ;
+}
+
+.Fond-ecran-bleue #back{
+    background: #2563eb;
+}
+
+.Fond-ecran-bleue #back:hover{
+    background: white;
+    box-shadow: 0 0 15px rgba(37, 99, 235, 0.5),
+    0 4px 6px -1px rgba(0, 0, 0, 0.3);
+}
+
+.Fond-ecran-bleue .btn-ico{
+    background: #2563eb;
+}
+
+.Fond-ecran-bleue .btn-ico:hover{
+    background: white;
+    box-shadow: 0 0 15px rgba(37, 99, 235, 0.5),
+    0 4px 6px -1px rgba(0, 0, 0, 0.3);
+}
+
+.Fond-ecran-bleue .bouton-color{
+    color: white;
+}
+
+.Fond-ecran-bleue .bouton-color:hover{
+    background: #2b3a67;
+    box-shadow: 0 0 15px rgba(37, 99, 235, 0.5),
+    0 4px 6px -1px rgba(0, 0, 0, 0.3);
+    color: white;
+}
+
+/*hover fond d'ecran pour le theme bleue*/
+
+.Fond-ecran-bleue .btn-fonds-ecran{
+    color: white;
+}
+
+.Fond-ecran-bleue .box-btn-fonds-ecran:hover{
+    background: #2b3a67;
+    box-shadow: 0 0 15px rgba(37, 99, 235, 0.5),
+    0 4px 6px -1px rgba(0, 0, 0, 0.3);
+}
+
+.Fond-ecran-bleue .btn-option:hover{
+    background: linear-gradient(135deg, #1d4ed8, #0284c7);
+    color: #fff;
+    box-shadow: 0 0 15px rgba(37, 99, 235, 0.5),
+    0 4px 6px -1px rgba(0, 0, 0, 0.3);
+}
+
+.Fond-ecran-bleue input:checked + .slider{
+    background: #2563eb;
+}
+
+/*fin fond d'ecran bleue*/
+
+/*debut fond d'ecran rose*/
+
+#big_content.Fond-ecran-rose{
+    background-image: url("fonds/669283.jpg");
+    backdrop-filter: blur(50px);
+    transition: 0.9s ;
+}
+
+.Fond-ecran-rose #home{
+    background-color: #4A1C35;
+    opacity: 0.9;
+    transition: 0.9s ;
+}
+
+.Fond-ecran-rose #side_barre{
+    opacity: 0.7;
+}
+
+.Fond-ecran-rose #side_barre:hover{
+    background-color: rgba(122, 53, 91, 0.7);
+}
+
+.Fond-ecran-rose #search_content{
+    background-color: rgba(122, 53, 91, 0.7);
+    transition: 0.9s ;
+}
+
+.Fond-ecran-rose #back{
+    background: #f472b6;
+}
+
+.Fond-ecran-rose #back:hover{
+    background: white;
+    box-shadow: 0 0 20px rgba(244, 114, 182, 0.6),
+    0 6px 10px -1px rgba(0, 0, 0, 0.4);
+}
+
+.Fond-ecran-rose .btn-ico{
+    background: #f472b6;
+}
+
+.Fond-ecran-rose .btn-ico:hover{
+    background: white;
+    box-shadow: 0 0 20px rgba(244, 114, 182, 0.6),
+    0 6px 10px -1px rgba(0, 0, 0, 0.4);
+}
+
+.Fond-ecran-rose .bouton-color{
+    color: #ffffff;
+}
+
+.Fond-ecran-rose .bouton-color:hover{
+    background: #681f46;
+    box-shadow: 0 0 20px rgba(244, 114, 182, 0.4),
+    0 6px 10px -1px rgba(0, 0, 0, 0.4);
+    color: #ffffff;
+}
+
+.Fond-ecran-rose .btn-fonds-ecran{
+    color: #ffffff;
+}
+
+.Fond-ecran-rose .box-btn-fonds-ecran:hover{
+    background: #521F3C;
+    box-shadow: 0 0 20px rgba(244, 114, 182, 0.4),
+    0 6px 10px -1px rgba(0, 0, 0, 0.4);
+}
+
+.Fond-ecran-rose .btn-option:hover{
+    background: linear-gradient(135deg, #f472b6, #db2777);
+    box-shadow: 0 0 20px rgba(244, 114, 182, 0.5),
+    0 6px 10px -1px rgba(0, 0, 0, 0.4);
+    color: #ffffff;
+}
+
+.Fond-ecran-rose input:checked + .slider{
+    background: #f472b6;
+}
+
+/*fin fond d'ecran rose*/
+
+/*debut fond d'ecran rouge*/
+
+#big_content.Fond-ecran-rouge{
+    background-image: url("fonds/118285.jpg");
+    backdrop-filter: blur(50px);
+    transition: 0.9s ;
+}
+
+.Fond-ecran-rouge #home{
+    background-color: #18080a;
+    opacity: 0.9;
+    transition: 0.9s ;
+}
+
+.Fond-ecran-rouge #side_barre{
+    opacity: 0.7;
+}
+
+.Fond-ecran-rouge #side_barre:hover{
+    background-color: rgba(45, 18, 21, 0.7);
+}
+
+.Fond-ecran-rouge #search_content{
+    background-color: rgba(45, 18, 21, 0.7);
+    transition: 0.9s ;
+}
+
+.Fond-ecran-rouge #back{
+    background: #ef4444;
+}
+
+.Fond-ecran-rouge #back:hover{
+    background: white;
+    box-shadow: 0 4px 15px rgba(220, 38, 38, 0.5),
+    0 0 8px rgba(234, 88, 12, 0.3);
+}
+
+.Fond-ecran-rouge .btn-ico{
+    background: #ef4444;
+}
+
+.Fond-ecran-rouge .btn-ico:hover{
+    background: white;
+    box-shadow: 0 4px 15px rgba(220, 38, 38, 0.5),
+    0 0 8px rgba(234, 88, 12, 0.3);
+}
+
+.Fond-ecran-rouge .bouton-color{
+    color: white;
+}
+
+.Fond-ecran-rouge .bouton-color:hover{
+    background: #2d1215;
+    box-shadow: 0 4px 15px rgba(220, 38, 38, 0.5),
+    0 0 8px rgba(234, 88, 12, 0.3);
+    color: #ffffff;
+}
+
+.Fond-ecran-rouge .btn-fonds-ecran{
+    color: white;
+}
+
+.Fond-ecran-rouge .box-btn-fonds-ecran:hover{
+    background: #2d1215;
+    box-shadow: 0 4px 15px rgba(220, 38, 38, 0.5),
+    0 0 8px rgba(234, 88, 12, 0.3);
+}
+
+.Fond-ecran-rouge .btn-option:hover{
+    background: linear-gradient(135deg, #dc2626, #ea580c);
+    box-shadow: 0 4px 15px rgba(220, 38, 38, 0.5),
+    0 0 8px rgba(234, 88, 12, 0.3);
+    color: #ffffff;
+}
+
+.Fond-ecran-rouge input:checked + .slider{
+    background: #ef4444;
+}
+
+/*fin fond d'ecran rouge*/
+
+/*debut fond d'ecran violet*/
+
+#big_content.Fond-ecran-violet{
+    background-image: url("fonds/418894.jpg");
+    backdrop-filter: blur(50px);
+    transition: 0.9s ;
+}
+
+.Fond-ecran-violet #home{
+    background-color: #0f0c1b;
+    opacity: 0.9;
+    transition: 0.9s ;
+}
+
+.Fond-ecran-violet #side_barre{
+    background-color: rgba(30, 24, 55, 0.7);
+}
+
+.Fond-ecran-violet #side_barre:hover{
+    opacity: 0.7;
+}
+
+.Fond-ecran-violet #search_content{
+    background-color: rgba(30, 24, 55, 0.7);
+    transition: 0.9s ;
+}
+
+.Fond-ecran-violet #back{
+    background: #8b5cf6;
+}
+
+.Fond-ecran-violet #back:hover{
+    background: white;
+    box-shadow: 0 4px 15px rgba(139, 92, 246, 0.5),
+    0 0 8px rgba(99, 102, 241, 0.3);
+}
+
+.Fond-ecran-violet .btn-ico{
+    background: #8b5cf6;
+}
+
+.Fond-ecran-violet .btn-ico:hover{
+    background: white;
+    box-shadow: 0 4px 15px rgba(139, 92, 246, 0.5),
+    0 0 8px rgba(99, 102, 241, 0.3);
+}
+
+.Fond-ecran-violet .bouton-color{
+    color: white;
+}
+
+.Fond-ecran-violet .bouton-color:hover{
+    background: #1e1837;
+    box-shadow: 0 4px 15px rgba(139, 92, 246, 0.5),
+    0 0 8px rgba(99, 102, 241, 0.3);
+    color: #ffffff;
+}
+
+.Fond-ecran-violet .btn-fonds-ecran{
+    color: white;
+}
+
+.Fond-ecran-violet .box-btn-fonds-ecran:hover{
+    background: #1e1837;
+    box-shadow: 0 4px 15px rgba(139, 92, 246, 0.5),
+    0 0 8px rgba(99, 102, 241, 0.3);
+}
+
+.Fond-ecran-violet .btn-option:hover{
+    background: linear-gradient(135deg, #7c3aed, #6366f1);
+    box-shadow: 0 6px 20px rgba(124, 58, 237, 0.45),
+    0 0 10px rgba(99, 102, 241, 0.3);
+    color: #ffffff;
+}
+
+.Fond-ecran-violet input:checked + .slider{
+    background: #8b5cf6;
+}
+
+/*fin fond d'ecran violet*/
 
 /*fin de fonction pour les fond d'ecran*/
 
@@ -868,11 +1251,13 @@ input:checked + .slider::before{
         max-width: 400px !important;
         height: 70px !important;
         background: transparent !important;
+        backdrop-filter: blur(12px);          /* Effet de flou sur le contenu en dessous */
+        -webkit-backdrop-filter: blur(12px);  /* Support Safari / Chrome WebKit */
+        border: 1px transparent; /* Bordure discrète et légèrement brillante */
         flex-direction: row !important;
         justify-content: space-around !important;
         align-items: center !important;
         border-radius: 20px !important;
-        border: none !important;
         border-top: 1px solid #1e293b !important;
         box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5) !important;
         margin: 10px !important;

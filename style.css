@@ -819,7 +819,7 @@ input:checked + .slider::before{
 
 /*fond d'ecran vert*/
 #big_content.Fond-ecran-vert{
-    background-image: url("fonds/400218.jpg");
+    background-image: url("fonds/378185.jpg");
     backdrop-filter: blur(50px);
     transition: 0.9s ;
 }
@@ -1120,7 +1120,7 @@ input:checked + .slider::before{
 /*debut fond d'ecran violet*/
 
 #big_content.Fond-ecran-violet{
-    background-image: url("fonds/418894.jpg");
+    background-image: url("fonds/413265.jpg");
     backdrop-filter: blur(50px);
     transition: 0.9s ;
 }
@@ -1340,6 +1340,10 @@ input:checked + .slider::before{
         align-items: center !important;
         padding: 10px !important;
         box-sizing: border-box !important;
+    }
+
+    .btn-fonds{
+        width: 30%;
     }
 }
 /*fin responsive pour les telephones*/

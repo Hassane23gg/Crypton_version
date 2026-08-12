@@ -89,16 +89,16 @@ function DesactiverBoutonFondEcran(boutonActiver){
 
 }
 
-// fonction pour enlever fond d'ecran
+// fonction pour enlever fond d'ecran et désactiver les thèmes de couleurs
 function EnleverFondEcran(){
-    big_content.classList.remove("theme-light");
     big_content.classList.remove("Fond-ecran-vert");
     big_content.classList.remove("Fond-ecran-bleue");
     big_content.classList.remove("Fond-ecran-rose");
-    big_content.classList.remove("Fond-ecran-rouge")
-    big_content.classList.remove("Fond-ecran-violet")
+    big_content.classList.remove("Fond-ecran-rouge");
+    big_content.classList.remove("Fond-ecran-violet");
 
-
+    // Retire les thèmes pour réinitialiser vers le thème vert de base
+    EnleverThemes();
 }
 
 // fonction pour ouvrir les options
@@ -240,7 +240,7 @@ function ThemeApp(theme){
                                   <div class="box-btn-fonds-ecran">
                                      <button class="btn-fonds-ecran">
                                         Fonds d'écran vert
-                                        <img id="vert-fond" class="btn-fonds" src="fonds/497175.png" alt="">
+                                        <img id="vert-fond" class="btn-fonds" src="fonds/378185.jpg" alt="">
                                      </button>
                                      <label class="switch">
                                           <input type="checkbox" id="FondVert">
@@ -280,7 +280,7 @@ function ThemeApp(theme){
                                   <div class="box-btn-fonds-ecran">
                                       <button class="btn-fonds-ecran">
                                          Fond d'écran violet
-                                         <img class="btn-fonds" src="fonds/418894.jpg" alt="">
+                                         <img class="btn-fonds" src="fonds/413265.jpg" alt="">
                                       </button>
                                       <label class="switch">
                                           <input type="checkbox" id="FondViolet">
@@ -310,7 +310,8 @@ function ThemeApp(theme){
         if(FondVert) {
             FondVert.addEventListener('change', () => {
                 DesactiverBoutonFondEcran(FondVert);
-                EnleverFondEcran()
+                DesactiverAutres(null);
+                EnleverFondEcran();
                 if (FondVert.checked) {
                     big_content.classList.add('Fond-ecran-vert');
 
@@ -322,58 +323,70 @@ function ThemeApp(theme){
 
         // fonction pour le fond d'ecran bleue
         const FondBleue = document.getElementById("FondBleue");
-        FondBleue.addEventListener("change", () => {
-            DesactiverBoutonFondEcran(FondBleue);
-            EnleverFondEcran()
-            if (FondBleue.checked) {
-                big_content.classList.add('Fond-ecran-bleue');
-            }
+        if(FondBleue) {
+            FondBleue.addEventListener("change", () => {
+                DesactiverBoutonFondEcran(FondBleue);
+                DesactiverAutres(null);
+                EnleverFondEcran();
+                if (FondBleue.checked) {
+                    big_content.classList.add('Fond-ecran-bleue');
+                }
 
-            else{
-                big_content.classList.remove('Fond-ecran-bleue');
-            }
-        })
+                else{
+                    big_content.classList.remove('Fond-ecran-bleue');
+                }
+            });
+        }
 
         // fonction pour le fond d'ecran rose
         const FondRose = document.getElementById("FondRose");
-        FondRose.addEventListener("change", () => {
-            DesactiverBoutonFondEcran(FondRose);
-            EnleverFondEcran()
-            if (FondRose.checked) {
-                big_content.classList.add('Fond-ecran-rose');
-            }
-            else{
-                big_content.classList.remove('Fond-ecran-rose');
-            }
-        })
+        if(FondRose) {
+            FondRose.addEventListener("change", () => {
+                DesactiverBoutonFondEcran(FondRose);
+                DesactiverAutres(null);
+                EnleverFondEcran();
+                if (FondRose.checked) {
+                    big_content.classList.add('Fond-ecran-rose');
+                }
+                else{
+                    big_content.classList.remove('Fond-ecran-rose');
+                }
+            });
+        }
 
         // fonction pour le fond d'ecran rouge
         const FondRouge = document.getElementById("FondRouge");
-        FondRouge.addEventListener("change", () => {
-            if (FondRouge.checked) {
+        if(FondRouge) {
+            FondRouge.addEventListener("change", () => {
                 DesactiverBoutonFondEcran(FondRouge);
-                EnleverFondEcran()
-                big_content.classList.add('Fond-ecran-rouge');
-            }
+                DesactiverAutres(null);
+                EnleverFondEcran();
+                if (FondRouge.checked) {
+                    big_content.classList.add('Fond-ecran-rouge');
+                }
 
-            else{
-                big_content.classList.remove('Fond-ecran-rouge');
-            }
-        })
+                else{
+                    big_content.classList.remove('Fond-ecran-rouge');
+                }
+            });
+        }
 
         // fonction pour le fond d'ecran violet
         const FondViolet = document.getElementById("FondViolet");
-        FondViolet.addEventListener('change', () => {
-            if (FondViolet.checked) {
+        if(FondViolet) {
+            FondViolet.addEventListener('change', () => {
                 DesactiverBoutonFondEcran(FondViolet);
-                EnleverFondEcran()
-                big_content.classList.add('Fond-ecran-violet');
-            }
+                DesactiverAutres(null);
+                EnleverFondEcran();
+                if (FondViolet.checked) {
+                    big_content.classList.add('Fond-ecran-violet');
+                }
 
-            else{
-                big_content.classList.remove('Fond-ecran-violet');
-            }
-        })
+                else{
+                    big_content.classList.remove('Fond-ecran-violet');
+                }
+            });
+        }
 
     }
 
@@ -478,9 +491,10 @@ function OpenTheme(theme){
         if(activation) {
             activation.addEventListener("change", () => {
                 if (activation.checked) {
-                    EnleverFondEcran()
+                    EnleverFondEcran();
                     EnleverThemes();
                     DesactiverAutres(activation);
+                    DesactiverBoutonFondEcran(activation);
                     big_content.classList.add("theme-light");
                     home.style.border = "none";
                     console.log("Thème clair activé");
@@ -546,6 +560,8 @@ function OpenTheme(theme){
         if(BleueColor) {
             BleueColor.addEventListener("change", () => {
                 if (BleueColor.checked) {
+                    EnleverFondEcran();
+                    DesactiverBoutonFondEcran(BleueColor);
                     DesactiverAutres(BleueColor);
                     EnleverThemes();
                     big_content.classList.add("theme-bleue");
@@ -559,6 +575,8 @@ function OpenTheme(theme){
         if(RoseColor) {
             RoseColor.addEventListener("change", () => {
                 if (RoseColor.checked) {
+                    EnleverFondEcran();
+                    DesactiverBoutonFondEcran(RoseColor);
                     DesactiverAutres(RoseColor);
                     EnleverThemes();
                     big_content.classList.add("theme-rose");
@@ -572,6 +590,8 @@ function OpenTheme(theme){
         if(RougeColor) {
             RougeColor.addEventListener("change", () => {
                 if (RougeColor.checked) {
+                    EnleverFondEcran();
+                    DesactiverBoutonFondEcran(RougeColor);
                     DesactiverAutres(RougeColor);
                     EnleverThemes();
                     big_content.classList.add("theme-rouge");
@@ -585,6 +605,8 @@ function OpenTheme(theme){
         if(VioletColor) {
             VioletColor.addEventListener("change", () => {
                 if (VioletColor.checked) {
+                    EnleverFondEcran();
+                    DesactiverBoutonFondEcran(VioletColor);
                     DesactiverAutres(VioletColor);
                     EnleverThemes();
                     big_content.classList.add("theme-violet");

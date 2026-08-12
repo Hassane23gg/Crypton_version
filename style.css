@@ -577,7 +577,7 @@ input:checked + .slider::before{
 }
 
 .theme-rose .btn-ico:hover{
-    background: #fbcfe8;
+    background: white;
     box-shadow: 0 0 20px rgba(244, 114, 182, 0.6),
     0 6px 10px -1px rgba(0, 0, 0, 0.4);
 }
@@ -587,7 +587,7 @@ input:checked + .slider::before{
 }
 
 .theme-rose #back:hover{
-    background: #fbcfe8;
+    background: white;
     box-shadow: 0 0 20px rgba(244, 114, 182, 0.6),
     0 6px 10px -1px rgba(0, 0, 0, 0.4);
 }
@@ -599,7 +599,7 @@ input:checked + .slider::before{
 }
 
 .theme-rose .bouton-color:hover{
-    background: #250C1B;
+    background: #681f46;
     box-shadow: 0 0 20px rgba(244, 114, 182, 0.4),
     0 6px 10px -1px rgba(0, 0, 0, 0.4);
     color: #ffffff;

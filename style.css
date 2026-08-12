@@ -819,7 +819,7 @@ input:checked + .slider::before{
 
 /*fond d'ecran vert*/
 #big_content.Fond-ecran-vert{
-    background-image: url("fonds/378185.jpg");
+    background-image: url("fonds/366332.jpg");
     backdrop-filter: blur(50px);
     transition: 0.9s ;
 }
@@ -1344,6 +1344,10 @@ input:checked + .slider::before{
 
     .btn-fonds{
         width: 30%;
+    }
+
+    .switch{
+        width: 20% !important;
     }
 }
 /*fin responsive pour les telephones*/

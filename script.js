@@ -240,7 +240,7 @@ function ThemeApp(theme){
                                   <div class="box-btn-fonds-ecran">
                                      <button class="btn-fonds-ecran">
                                         Fonds d'écran vert
-                                        <img id="vert-fond" class="btn-fonds" src="fonds/378185.jpg" alt="">
+                                        <img id="vert-fond" class="btn-fonds" src="fonds/366332.jpg" alt="">
                                      </button>
                                      <label class="switch">
                                           <input type="checkbox" id="FondVert">

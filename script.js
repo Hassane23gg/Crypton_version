@@ -242,50 +242,60 @@ function ThemeApp(theme){
                                         Fonds d'écran vert
                                         <img id="vert-fond" class="btn-fonds" src="fonds/366332.jpg" alt="">
                                      </button>
-                                     <label class="switch">
+                                     <button class="bouton-btn">
+                                        <label class="switch">
                                           <input type="checkbox" id="FondVert">
                                           <span class="slider"></span>
-                                      </label>
+                                        </label>
+                                     </button>
                                   </div>
                                   <div class="box-btn-fonds-ecran">
                                      <button class="btn-fonds-ecran">
                                          Fond d'écran bleue 
                                          <img class="btn-fonds" src="fonds/354971.jpg" alt="">
                                      </button>
-                                     <label class="switch">
+                                     <button class="bouton-btn">
+                                        <label class="switch">
                                           <input type="checkbox" id="FondBleue">
                                           <span class="slider"></span>
-                                      </label>
+                                       </label>
+                                     </button>
                                   </div>
                                   <div class="box-btn-fonds-ecran">
                                       <button class="btn-fonds-ecran">
                                          Fond d'écran rose 
                                          <img class="btn-fonds" src="fonds/669283.jpg" alt="">
                                       </button>
-                                      <label class="switch">
-                                          <input type="checkbox" id="FondRose">
-                                          <span class="slider"></span>
-                                      </label>
+                                      <button class="bouton-btn">
+                                         <label class="switch">
+                                            <input type="checkbox" id="FondRose">
+                                            <span class="slider"></span>
+                                         </label>
+                                      </button>
                                   </div>
                                   <div class="box-btn-fonds-ecran">
                                       <button class="btn-fonds-ecran">
                                          Fond d'écran rouge
                                          <img class="btn-fonds" src="fonds/118285.jpg" alt="">
                                       </button>
-                                      <label class="switch">
-                                          <input type="checkbox" id="FondRouge">
+                                      <button class="bouton-btn">
+                                         <label class="switch">
+                                          <input type="checkbox" id="FondRose">
                                           <span class="slider"></span>
                                       </label>
+                                      </button>
                                   </div>
                                   <div class="box-btn-fonds-ecran">
                                       <button class="btn-fonds-ecran">
                                          Fond d'écran violet
                                          <img class="btn-fonds" src="fonds/413265.jpg" alt="">
                                       </button>
-                                      <label class="switch">
-                                          <input type="checkbox" id="FondViolet">
-                                          <span class="slider"></span>
-                                      </label>
+                                      <button class="bouton-btn">
+                                          <label class="switch">
+                                             <input type="checkbox" id="FondViolet">
+                                             <span class="slider"></span>
+                                          </label>
+                                      </button>
                                   </div>
                                 </div>
                              </div>

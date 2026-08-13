@@ -280,7 +280,7 @@ function ThemeApp(theme){
                                       </button>
                                       <button class="bouton-btn">
                                          <label class="switch">
-                                          <input type="checkbox" id="FondRose">
+                                          <input type="checkbox" id="FondRouge">
                                           <span class="slider"></span>
                                       </label>
                                       </button>
